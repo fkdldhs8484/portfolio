@@ -1,0 +1,38 @@
+.header__wrap {
+  height: 60px;
+  margin-top: 26px;
+}
+
+.header__inner {
+}
+
+.header__logo__text {
+  float: left;
+  width: 20%;
+}
+
+.header__logo__text a {
+  font-size: 26px;
+}
+
+.header__header {
+  float: right;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__header h2 {
+  font-size: 18px;
+}
+
+.header__menu {
+}
+
+.header__menu ul {
+  display: flex;
+}
+
+.header__menu ul li {
+  font-size: 18px;
+}
