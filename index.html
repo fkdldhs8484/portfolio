@@ -1,49 +1,98 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>포토폴리오 사이트</title>
 
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="//fonts.googleapis.com/css?family=Abel"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>포토폴리오 사이트</title>
 
-    <!-- css -->
-    <link rel="stylesheet" href="assets/css/fonts.css" />
-    <link rel="stylesheet" href="assets/css/reset.css" />
-    <link rel="stylesheet" href="assets/css/common.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Abel" />
 
-    <!-- css 섹션별 -->
-    <link rel="stylesheet" href="assets/css/header.css" />
-  </head>
-  <body>
-    <!-- skip -->
-    <div class="skip"></div>
-    <!-- skip -->
+  <!-- css -->
+  <link rel="stylesheet" href="assets/css/fonts.css" />
+  <link rel="stylesheet" href="assets/css/reset.css" />
+  <link rel="stylesheet" href="assets/css/common.css" />
 
-    <!-- header -->
-    <header id="headerType" class="header__wrap">
-      <div class="header__inner container">
-        <div class="header__logo__text">
-          <h1><a href="#">develpoer</a></h1>
-        </div>
-        <div class="header__header">
-          <h2>publihser and front develpoer</h2>
-          <div class="header__menu">
-            <ul>
-              <li><a href="#">HOME</a></li>
-              <li><a href="#">WORK</a></li>
-              <li><a href="#">STUDY</a></li>
-              <li><a href="#">CONTACT</a></li>
-            </ul>
-          </div>
+  <!-- css 섹션별 -->
+  <link rel="stylesheet" href="assets/css/header.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body>
+  <!-- skip -->
+  <div class="skip"></div>
+  <!-- skip -->
+
+  <!-- header -->
+  <header id="headerType" class="header__wrap">
+    <div class="header__inner container">
+      <div class="header__logo__text">
+        <h1><a href="#">develpoer</a></h1>
+      </div>
+      <div class="header__header">
+        <h2>publihser and front develpoer</h2>
+        <div class="header__menu">
+          <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">WORK</a></li>
+            <li><a href="#">STUDY</a></li>
+            <li><a href="#">CONTACT</a></li>
+          </ul>
         </div>
       </div>
-    </header>
-    <!-- header -->
-  </body>
+    </div>
+  </header>
+  <!-- header -->
+
+  <main id="mainType">
+    <section class="main__wrap">
+      <h1 class="blind">메인페이지 영역</h1>
+      <div class="main__inner">
+        <h2 class="main__title ">
+          <span class="backInUp">F</span>
+          <span>R</span>
+          <span>O</span>
+          <span>N</span>
+          <span>T</span>
+        </h2>
+        <span class="main__span">developer</span>
+        <div class="main__icon">
+          <div class="i1">
+            <img src="/assets/img/main_icon_01.png" alt="별">
+          </div>
+          <div class="i2">
+            <img src="/assets/img/main_icon_02.png" alt="우주선">
+          </div>
+          <div class="i3">
+            <img src="/assets/img/main_icon_03.png" alt="우산">
+          </div>
+          <div class="i4">
+            <img src="/assets/img/main_icon_04.png" alt="트로피">
+          </div>
+        </div>
+        <div class="main__desc">6개월 동안 열심히 공부하여 만들었습니다. 즐겁게 봐주세요.</div>
+      </div>
+    </section>
+
+
+
+  </main>
+
+  <script>
+    function scroll() {
+      let scrollTop = window.pageXOffset || document.documentElement.scrollTop || window.screenY;
+
+      document.querySelectorAll(".main__title").forEach(item => {
+        if (scrollTop > item.offsetTop - window.innerHeight / 2) {
+          item.classList.add("show");
+        }
+      });
+      requestAnimationFrame(scroll); //움직임이 부드럽다. 1분에 60번 실행 메모리 적게 차지함.
+    }
+    scroll(); 
+  </script>
+</body>
+
 </html>

@@ -1,0 +1,119 @@
+.main__wrap {
+    font-family: "Poppins";
+    /* width: 1920px;
+    height: 1087px; */
+}
+
+.main__inner {
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    letter-spacing: -2px;
+}
+
+.main__title {
+    font-size: 367px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 100px;
+    letter-spacing: -35px;
+
+    opacity: 1;
+    /* transform: translateX(-200px); */
+    transition: all 1s 0.9s cubic-bezier(0.55, 0.06, 0.68, 0.19);
+}
+
+.main__title span.show {
+    opacity: 0;
+    transform: translateY(0px) scale(0.7);
+}
+
+@keyframes backInUp {
+    0% {
+        -webkit-transform: translateY(1200px) scale(0.7);
+        transform: translateY(1200px) scale(0.7);
+        opacity: 0.7;
+    }
+
+    80% {
+        -webkit-transform: translateY(0px) scale(0.7);
+        transform: translateY(0px) scale(0.7);
+        opacity: 0.7;
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.main__span {
+    font-size: 300px;
+    font-weight: 100;
+    line-height: 0;
+}
+
+.main__icon {
+    position: relative;
+    left: 0;
+    transform: translateX(50px);
+
+    top: 0;
+}
+
+.main__icon .i1 {
+    width: 245xp;
+    position: absolute;
+    left: 194px;
+    top: -753px;
+    z-index: -1;
+}
+
+.main__icon .i2 {
+    width: 250xp;
+    position: absolute;
+    right: 279px;
+    top: -787px;
+    z-index: -1;
+}
+
+.main__icon .i3 {
+    width: 309xp;
+    position: absolute;
+    left: 195px;
+    top: -90px;
+}
+
+.main__icon .i4 {
+    width: 386xp;
+    position: absolute;
+    right: 322px;
+    top: -212px;
+    z-index: 1;
+}
+
+.main__icon,
+.i1,
+i2,
+i3,
+i4 {
+    animation: motion 0.3s /* 속도 */ linear 0s
+        /* 처음부터 끝까지 일정 속도로 진행 */ infinite alternate; /* 무한 반복 */
+}
+@keyframes motion {
+    0% {
+        margin-top: 0px;
+    } /* 처음 위치 */
+    100% {
+        margin-top: 10px;
+    } /* 마지막 위치 */
+}
+
+.main__desc {
+    margin-top: 305px;
+    margin-bottom: 18px;
+    font-size: 16px;
+    font-family: "Poppins";
+}
