@@ -70,8 +70,8 @@
 .main__icon .i3 {
   width: 18vw;
   position: absolute;
-  left: 10%;
-  bottom: -30%;
+  left: 15%;
+  bottom: -44%;
   z-index: 1;
   transform: rotate(20deg);
 }
@@ -79,8 +79,8 @@
 .main__icon .i4 {
   width: 15vw;
   position: absolute;
-  right: 10%;
-  bottom: -30%;
+  right: 20%;
+  bottom: -35%;
   z-index: 1;
   transform: rotate(353deg);
 }
