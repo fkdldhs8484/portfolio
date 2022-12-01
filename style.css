@@ -1,6 +1,96 @@
-.header__wrap {
+/* header */
+.header__inner {
   font-family: "Abel";
   z-index: 10000;
   position: fixed;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__inner h1 {
+  font-size: 26px;
+}
+
+.header__inner em {
+  font-size: 18px;
+  padding-left: 190px;
+}
+
+.header__inner > nav {
+  width: 20%;
+}
+
+.header__inner > nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* section1 */
+#section1 {
+  height: 100vh;
+  font-family: "Poppins";
+  text-align: center;
+  align-items: center;
+}
+
+.main__inner {
+  position: relative;
+}
+
+.main__title {
+  font-weight: bolder;
+  font-size: 367px;
+}
+
+.main__span {
+  font-weight: 100;
+  font-size: 300px;
+  line-height: 0.77px;
+}
+
+.main__icon .i1 {
+  width: 15%;
+  position: absolute;
+  left: 10%;
+  top: 0;
+  z-index: -1;
+}
+
+.main__icon .i2 {
+  width: 18%;
+  position: absolute;
+  right: 10%;
+  top: 0;
+  z-index: -1;
+  transform: rotate(9deg);
+}
+
+.main__icon .i3 {
+  width: 18%;
+  position: absolute;
+  left: 15%;
+  bottom: -30%;
+  z-index: 1;
+  transform: rotate(20deg);
+}
+
+.main__icon .i4 {
+  width: 15%;
+  position: absolute;
+  right: 20%;
+  bottom: -50%;
+  z-index: 1;
+  transform: rotate(353deg);
+}
+
+.main__desc {
+  font-family: "Netmarble";
+  font-weight: 100;
+
+  position: absolute;
+  left: 50%;
+  bottom: -50%;
+  transform: translate(-50%, -50%);
 }

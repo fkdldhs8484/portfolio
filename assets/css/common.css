@@ -19,8 +19,8 @@
 /* 컨테이너 */
 .container {
   width: 100%;
-  max-width: 1160px;
-  padding: 0 20px;
+  max-width: 1920px;
+  padding: 10px 20px;
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -85,9 +85,9 @@
 }
 
 /* 폰트 */
-.nexon {
-  font-family: "NexonLv1Gothic";
-  font-weight: 400;
+.Netmarble {
+  font-family: "Netmarble";
+  font-weight: 300;
 }
 
 /* 배경 */
