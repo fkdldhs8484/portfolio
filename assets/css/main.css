@@ -31,7 +31,6 @@
 }
 
 .main__title span:nth-child(1) {
-  opacity: 1;
   transition-delay: 100ms;
 }
 
@@ -129,5 +128,23 @@ i4 {
 }
 
 /* media */
-@media (max-width: 1300px) {
+@media (max-width: 1200px) {
+  .main__inner {
+    width: 100%;
+  }
+
+  .main__title {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.3s all scale();
+  }
+
+  .main__span {
+    font-size: 230px;
+    display: flex;
+    justify-content: center;
+  }
 }
