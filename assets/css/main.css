@@ -31,7 +31,12 @@
 }
 
 .main__title span:nth-child(1) {
+  opacity: 1;
   transition-delay: 100ms;
+}
+
+.main__title span:nth-child(2) {
+  transition-delay: 150ms;
 }
 
 @keyframes backInUp {
@@ -121,4 +126,8 @@ i4 {
   margin-bottom: 18px;
   font-size: 16px;
   font-family: "Poppins";
+}
+
+/* media */
+@media (max-width: 1300px) {
 }
