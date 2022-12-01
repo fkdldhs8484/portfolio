@@ -33,8 +33,6 @@
   font-family: "Poppins";
   text-align: center;
   align-items: center;
-  display: flex;
-  justify-content: center;
 }
 
 .main__inner {
@@ -99,7 +97,7 @@
 
 /* section2 */
 #section2 {
-  height: 50vh;
+  /* height: 100vh; */
   font-family: "Poppins";
   position: relative;
 }
