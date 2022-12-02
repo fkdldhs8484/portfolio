@@ -3,6 +3,7 @@
   font-family: "Abel";
   z-index: 10000;
   position: fixed;
+
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -33,6 +34,9 @@
   font-family: "Poppins";
   text-align: center;
   align-items: center;
+
+  display: flex;
+  justify-content: center;
 }
 
 .main__inner {
@@ -53,16 +57,16 @@
 .main__icon .i1 {
   width: 12vw;
   position: absolute;
-  left: 10%;
-  top: 0;
+  left: 0;
+  top: -70px;
   z-index: -1;
 }
 
 .main__icon .i2 {
   width: 12vw;
   position: absolute;
-  right: 10%;
-  top: 0;
+  right: 0;
+  top: -70px;
   z-index: -1;
   transform: rotate(9deg);
 }
@@ -70,7 +74,7 @@
 .main__icon .i3 {
   width: 18vw;
   position: absolute;
-  left: 15%;
+  left: 0;
   bottom: -44%;
   z-index: 1;
   transform: rotate(20deg);
@@ -79,7 +83,7 @@
 .main__icon .i4 {
   width: 15vw;
   position: absolute;
-  right: 20%;
+  right: 0;
   bottom: -35%;
   z-index: 1;
   transform: rotate(353deg);
@@ -97,7 +101,7 @@
 
 /* section2 */
 #section2 {
-  /* height: 100vh; */
+  height: 50vw;
   font-family: "Poppins";
   position: relative;
 }
@@ -117,9 +121,68 @@
 
 /* section3 */
 #section3 {
+  max-width: 1920px;
   height: 100vh;
   font-family: "Netmarble";
 }
 
 .card__inner {
+  display: flex;
+
+  justify-content: space-between;
+  padding: 0;
+}
+
+.card {
+  width: 720px;
+  border: 1px solid #000;
+  text-align: center;
+  padding: 17px 10px 17px 10px;
+}
+
+.card__btn ul {
+  display: flex;
+
+  padding-bottom: 13px;
+  text-align: center;
+  justify-content: space-between;
+}
+.card__btn ul li {
+  border: 1px solid #000;
+  width: 176px;
+  height: 27px;
+  font-weight: 100;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__btn ul li:hover {
+  background: #d9d9d9;
+}
+
+.card img {
+  width: 715px;
+  height: 540px;
+  margin-bottom: 32px;
+}
+
+.card__box h2 {
+  padding: 10px 15px;
+  font-size: 18px;
+  font-weight: lighter;
+  text-align: left;
+  background: #d9d9d9;
+  margin-bottom: 10px;
+}
+
+.card__box p {
+  font-size: 18px;
+  font-weight: lighter;
+  text-align: left;
+}
+
+.card__button {
+  text-align: center;
 }
