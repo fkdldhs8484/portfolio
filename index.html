@@ -65,7 +65,7 @@
           </div>
         </div>
       </section>
-
+ 
       <section id="section2">
         <div class="banner__inner">
           <h2>WORK</h2>
@@ -73,25 +73,24 @@
         </div>
       </section>
 
-     
+      <section id="section3">
+        <div class="card__inner">
+          
+        </div>
+      </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+      <section id="section4">
+        <div class="banner__inner">
+         
+        </div>
+      </section>
 
-    <script>
-      function scroll() {
-        let scrollTop =
-          window.pageXOffset ||
-          document.documentElement.scrollTop ||
-          window.screenY;
+      <section id="section5">
+        <div class="banner__inner">
+          
+        </div>
+      </section>
+  
 
-        document.querySelectorAll(".main__title").forEach((item) => {
-          if (scrollTop > item.offsetTop - window.innerHeight / 2) {
-            item.classList.add("show");
-          }
-        });
-        requestAnimationFrame(scroll); //움직임이 부드럽다. 1분에 60번 실행 메모리 적게 차지함.
-      }
-      scroll();
-    </script>
   </body>
 </html>
