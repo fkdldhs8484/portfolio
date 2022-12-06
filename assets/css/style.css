@@ -45,7 +45,7 @@ nav ul li a::before {
   transform: scaleX(0);
   background: #000;
 
-  text-decoration: none;
+  transition: transform 0.5s ease;
 }
 
 nav ul li a:hover::before {
