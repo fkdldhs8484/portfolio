@@ -1,13 +1,17 @@
 /* header */
 .header__inner {
-  font-family: "Abel";
-  z-index: 10000;
   position: fixed;
-  max-width: 1920px;
+  left: 0;
+  top: 0;
   width: 100%;
+  z-index: 10000;
   display: flex;
+  font-family: "Abel";
   justify-content: space-between;
   align-items: center;
+  padding: 10px 20px;
+
+  /* display: none; */
 }
 
 .header__inner h1 {
@@ -15,90 +19,76 @@
 }
 
 .header__inner em {
-  font-size: 18px;
-  padding-left: 190px;
+  font-size: 0.5em;
+  padding-left: 130px;
 }
 
-.header__inner > nav {
-  width: 20%;
+.header__inner li {
+  display: inline-block;
 }
 
-.header__inner > nav ul {
-  display: flex;
-  justify-content: space-around;
+.header__inner li a {
+  padding: 10px;
+  text-transform: uppercase;
 }
 
 /* section1 */
 #section1 {
   height: 100vh;
-  font-family: "Poppins";
-  text-align: center;
-  align-items: center;
-  box-sizing: border-box;
-  /* overflow: hidden; */
-
+  background-color: #e5e4e3;
   display: flex;
+  align-items: center;
   justify-content: center;
-}
-
-.main__inner {
+  text-align: center;
   position: relative;
 }
-
-.main__title {
-  font-weight: bolder;
-  font-size: 19vw;
+#section1 .text {
+  font-size: 18vw;
+  line-height: 0.79;
+  font-family: "Poppins";
+  text-transform: uppercase;
 }
-
-.main__span {
+#section1 .text > div:first-child {
+  font-weight: 900;
+}
+#section1 .text > div:last-child {
   font-weight: 100;
-  font-size: 15vw;
-  line-height: 0.77px;
 }
-
-.main__icon .i1 {
-  width: 12vw;
-  position: absolute;
-  left: 0;
-  top: -70px;
-  z-index: -1;
-}
-
-.main__icon .i2 {
-  width: 12vw;
-  position: absolute;
-  right: 0;
-  top: -70px;
-  z-index: -1;
-  transform: rotate(9deg);
-}
-
-.main__icon .i3 {
-  width: 18vw;
-  position: absolute;
-  left: 0;
-  bottom: -44%;
-  z-index: 1;
-  transform: rotate(20deg);
-}
-
-.main__icon .i4 {
-  width: 15vw;
-  position: absolute;
-  right: 0;
-  bottom: -35%;
-  z-index: 1;
-  transform: rotate(353deg);
-}
-
-.main__desc {
-  font-family: "Netmarble";
-  font-weight: 100;
-  font-size: 1vw;
+#section1 .ment {
   position: absolute;
   left: 50%;
-  bottom: -50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
+  bottom: 15px;
+  font-family: "Cafe24SsurroundAir";
+}
+#section1 .img > img {
+  position: absolute;
+  z-index: 1000;
+}
+#section1 .img1 {
+  width: 10vw;
+  left: 10vw;
+  top: 6vw;
+  transform: rotate(-25deg);
+}
+#section1 .img2 {
+  width: 14vw;
+  right: 10vw;
+  top: 4vw;
+  transform: rotate(25deg);
+}
+#section1 .img3 {
+  width: 13vw;
+  left: 10vw;
+  bottom: 5vw;
+  transform: rotate(25deg);
+}
+#section1 .img4 {
+  width: 13vw;
+  right: 10vw;
+  bottom: 5vw;
+
+  transform: rotate(333deg);
 }
 
 /* section2 */
@@ -121,6 +111,12 @@
   font-weight: 100;
 }
 
+.renderer {
+  background: #000;
+  width: 100%;
+  height: 100vh;
+}
+
 /* section3 */
 #section3 {
   height: 100vh;
@@ -130,7 +126,7 @@
 .card__inner {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 0;
 }
 
