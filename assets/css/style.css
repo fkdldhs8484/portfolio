@@ -95,10 +95,11 @@
   font-family: "Netmarble";
   font-weight: 100;
   font-size: 1vw;
-  position: absolute;
+  /* position: absolute;
   left: 50%;
   bottom: -50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
+  padding: 150px 0 0 0;
 }
 
 /* section2 */
@@ -198,6 +199,14 @@
   font-weight: lighter;
   background: #d9d9d9;
   font-size: 18px;
+}
+
+@media (max-width: 1300px) {
+  .card__inner {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+  }
 }
 
 /* section4 */
