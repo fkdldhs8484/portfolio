@@ -27,7 +27,7 @@
     <header id="headerType">
       <div class="header__inner container">
         <h1>develpoer <em>publihser and front develpoer</em></h1>
-        <nav aria-hidden="true">
+        <nav>
           <ul>
             <li><a href="#">HOME</a></li>
             <li><a href="#">WORK</a></li>
@@ -60,7 +60,7 @@
       <section id="section2">
         <div class="banner__inner">
           <h2>WORK</h2>
-          <div class="renderer"></div>
+          <img src="assets/img/footer01@2x.png" alt="이미지" />
         </div>
       </section>
 
@@ -476,69 +476,6 @@
 
       t1.from(".animation1", { y: 100, opacity: 0 });
       t1.from(".animation2", { y: 100, opacity: 0 }, "-=0.5");
-    </script>
-    <script>
-      var renderer = new THREE.WebGLRenderer({
-        antialias: true,
-      });
-      renderer.setSize(window.innerWidth, window.innerHeight);
-      document.body.appendChild(renderer.domElement);
-
-      var onRenderFcts = [];
-      var scene = new THREE.Scene();
-      var camera = new THREE.PerspectiveCamera(
-        25,
-        window.innerWidth / window.innerHeight,
-        0.01,
-        1000
-      );
-      camera.position.z = 15;
-      camera.position.y = 2;
-      scene.fog = new THREE.Fog(0x000, 0, 45);
-
-      // 조명 설정
-      var light = new THREE.AmbientLight(0x202020);
-      scene.add(light);
-      var light = new THREE.DirectionalLight("white", 5);
-      light.position.set(0.5, 0.0, 2);
-      scene.add(light);
-      var light = new THREE.DirectionalLight("white", 0.75 * 2);
-      light.position.set(-0.5, -0.5, -2);
-      scene.add(light);
-
-      var heightMap = THREEx.Terrain.allocateHeightMap(256, 256);
-      THREEx.Terrain.simplexHeightMap(heightMap);
-      var geometry = THREEx.Terrain.heightMapToPlaneGeometry(heightMap);
-      THREEx.Terrain.heightMapToVertexColor(heightMap, geometry);
-      var material = new THREE.MeshBasicMaterial({
-        wireframe: true,
-      });
-      var mesh = new THREE.Mesh(geometry, material);
-      scene.add(mesh);
-      mesh.lookAt(new THREE.Vector3(0, 1, 0));
-
-      mesh.scale.y = 3.5;
-      mesh.scale.x = 3;
-      mesh.scale.z = 0.2;
-      mesh.scale.multiplyScalar(10);
-
-      onRenderFcts.push(function (delta, now) {
-        mesh.rotation.z += 0.2 * delta;
-      });
-      onRenderFcts.push(function () {
-        renderer.render(scene, camera);
-      });
-      var lastTimeMsec = null;
-
-      requestAnimationFrame(function animate(nowMsec) {
-        requestAnimationFrame(animate);
-        lastTimeMsec = lastTimeMsec || nowMsec - 1000 / 60;
-        var deltaMsec = Math.min(200, nowMsec - lastTimeMsec);
-        lastTimeMsec = nowMsec;
-        onRenderFcts.forEach(function (onRenderFct) {
-          onRenderFct(deltaMsec / 1000, nowMsec / 1000);
-        });
-      });
     </script>
   </body>
 </html>
