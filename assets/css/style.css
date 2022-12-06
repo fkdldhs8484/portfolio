@@ -1,461 +1,487 @@
 /* header */
 
 .header__inner {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  z-index: 10000;
-  display: flex;
-  font-family: "Abel";
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+    display: flex;
+    font-family: "Abel";
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
 }
 
 .header__inner h1 {
-  font-size: 26px;
+    font-size: 26px;
 }
 
 .header__inner em {
-  font-size: 0.5em;
-  padding-left: 130px;
+    font-size: 0.5em;
+    padding-left: 130px;
 }
 
 .header__inner li {
-  display: inline-block;
+    display: inline-block;
 }
 
 .header__inner li a {
-  padding: 10px;
-  text-transform: uppercase;
+    padding: 10px;
+    text-transform: uppercase;
 }
 
 nav ul li {
-  position: relative;
+    position: relative;
 }
 
 nav ul li.active {
-  border-bottom: 1px solid #000;
+    border-bottom: 1px solid #000;
+    transform: scaleX(1);
+    transition: transform 0.5s ease;
 }
 
 nav ul li a::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 1px;
-  transform: scaleX(0);
-  background: #000;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    transform: scaleX(0);
+    background: #000;
 
-  transition: transform 0.5s ease;
+    transition: transform 0.5s ease;
 }
 
 nav ul li a:hover::before {
-  transform: scaleX(1);
-  transition: transform 0.5s ease;
+    transform: scaleX(1);
+    transition: transform 0.5s ease;
 }
 
 /* section1 */
 #section1 {
-  height: 100vh;
-  background-color: #e5e4e3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  position: relative;
+    height: 100vh;
+    background-color: #e5e4e3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
 }
 #section1 .text {
-  font-size: 18vw;
-  line-height: 0.79;
-  font-family: "Poppins";
-  text-transform: uppercase;
+    font-size: 18vw;
+    line-height: 0.79;
+    font-family: "Poppins";
+    text-transform: uppercase;
 }
 #section1 .text > div:first-child {
-  font-weight: 900;
+    font-weight: 900;
 }
 #section1 .text > div:last-child {
-  font-weight: 100;
+    font-weight: 100;
 }
 #section1 .ment {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 15px;
-  font-family: "Cafe24SsurroundAir";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 15px;
+    font-family: "Cafe24SsurroundAir";
 }
 #section1 .img > img {
-  position: absolute;
-  z-index: 1000;
+    position: absolute;
+    z-index: 1000;
 }
 #section1 .img1 {
-  width: 11vw;
-  left: 10vw;
-  top: 6vw;
-  animation: pulse 0.8s;
-  animation-delay: 1s;
-  animation-iteration-count: infinite;
-  /* transform: rotate(-25deg); */
+    width: 11vw;
+    left: 10vw;
+    top: 6vw;
+    animation: pulse 0.8s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    /* transform: rotate(-25deg); */
 }
 #section1 .img2 {
-  width: 12vw;
-  right: 10vw;
-  top: 4vw;
-  animation: pulse 0.8s;
-  animation-delay: 1s;
-  animation-iteration-count: infinite;
-  /* transform: rotate(25deg); */
+    width: 12vw;
+    right: 10vw;
+    top: 4vw;
+    animation: pulse 0.8s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    /* transform: rotate(25deg); */
 }
 #section1 .img3 {
-  width: 14vw;
-  left: 10vw;
-  bottom: 5vw;
-  animation: pulse 0.8s;
-  animation-delay: 1s;
-  animation-iteration-count: infinite;
-  /* transform: rotate(25deg); */
+    width: 14vw;
+    left: 10vw;
+    bottom: 5vw;
+    animation: pulse 0.8s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    /* transform: rotate(25deg); */
 }
 #section1 .img4 {
-  width: 15vw;
-  right: 10vw;
-  bottom: 5vw;
-  animation: pulse 0.8s;
-  animation-delay: 1s;
-  animation-iteration-count: infinite;
-  /* transform: rotate(333deg); */
+    width: 15vw;
+    right: 10vw;
+    bottom: 5vw;
+    animation: pulse 0.8s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    /* transform: rotate(333deg); */
 }
 
 @keyframes pulse {
-  0% {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
 
-  50% {
-    -webkit-transform: scale3d(1.05, 1.05, 1.05);
-    transform: scale3d(1.05, 1.05, 1.05);
-  }
+    50% {
+        -webkit-transform: scale3d(1.05, 1.05, 1.05);
+        transform: scale3d(1.05, 1.05, 1.05);
+    }
 
-  100% {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
 }
 
 /* section2 */
 #section2 {
-  font-family: "Poppins";
-  position: relative;
+    font-family: "Poppins";
+    position: relative;
 }
 
 .banner__inner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .banner__inner h2 {
-  position: absolute;
-  color: #b6b6b6;
-  font-size: 20vw;
-  font-weight: 100;
+    position: absolute;
+    color: #b6b6b6;
+    font-size: 20vw;
+    font-weight: 100;
 }
 
 #renderer {
-  width: 100%;
-  height: 100vh;
-  background: #000;
-  overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    overflow: hidden;
 }
 
 /* section3 */
 #section3 {
-  height: 100vh;
-  font-family: "Netmarble";
+    height: 100vh;
+    font-family: "Netmarble";
 }
 
 .card__inner {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0;
 }
 
 .card {
-  width: 720px;
-  border: 1px solid #000;
-  text-align: center;
-  padding: 17px 10px 17px 10px;
-  margin-bottom: 53px;
+    width: 720px;
+    border: 1px solid #000;
+    text-align: center;
+    padding: 17px 10px 17px 10px;
+    margin-bottom: 53px;
 }
 
-.card__btn ul {
-  display: flex;
-
-  padding-bottom: 13px;
-  text-align: center;
-  justify-content: space-between;
+#card__btn ul {
+    display: flex;
+    overflow: hidden;
+    padding-bottom: 13px;
+    text-align: center;
+    justify-content: space-between;
 }
-.card__btn ul li {
-  border: 1px solid #000;
-  width: 176px;
-  height: 27px;
-  font-weight: 100;
+#card__btn ul li {
+    border: 1px solid #000;
+    width: 176px;
+    height: 27px;
+    font-weight: 100;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.card__btn ul li:hover {
-  background: #d9d9d9;
+#card__btn li a {
+    display: block;
+
+    padding: 15px 20px;
+}
+
+#card__btn li.active {
+    background: #d9d9d9;
 }
 
 .card img {
-  width: 715px;
-  height: 540px;
-  margin-bottom: 32px;
+    width: 715px;
+    height: 540px;
+    margin-bottom: 32px;
+    display: block;
 }
 
 .card__box h2 {
-  padding: 10px 15px;
-  font-size: 18px;
-  font-weight: lighter;
-  text-align: left;
-  background: #d9d9d9;
-  margin-bottom: 10px;
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: lighter;
+    text-align: left;
+    background: #d9d9d9;
+    margin-bottom: 10px;
 }
 
 .card__box .card_p1 {
-  display: flex;
-  align-items: center;
-  padding: 10px 15px 10px 15px;
-  height: 126px;
-  font-size: 18px;
-  font-weight: lighter;
-  text-align: left;
-  margin-bottom: 10px;
-  background: #d9d9d9;
-  line-height: 24.75px;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px 10px 15px;
+    height: 126px;
+    font-size: 18px;
+    font-weight: lighter;
+    text-align: left;
+    margin-bottom: 10px;
+    background: #d9d9d9;
+    line-height: 24.75px;
 }
 
 .card__box .card_p2 {
-  padding: 10px 15px;
-  text-align: center;
-  font-weight: lighter;
-  background: #d9d9d9;
-  font-size: 18px;
+    padding: 10px 15px;
+    text-align: center;
+    font-weight: lighter;
+    background: #d9d9d9;
+    font-size: 18px;
+}
+
+.tab-cont {
+    position: relative;
+    width: 100%;
+    background: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 0 0 4px 4px;
+}
+
+.tab-cont > div {
+    position: absolute;
+    left: 0;
+    top: 20px;
+    width: 715px;
+    height: 540px;
 }
 
 @media (max-width: 1300px) {
-  .card__inner {
-    width: 70%;
-    display: flex;
-    justify-content: center;
-  }
+    .card__inner {
+        width: 70%;
+        display: flex;
+        justify-content: center;
+    }
 }
 
 /* section4 */
 #section4 {
-  /* height: 50vw; */
-  font-family: "Poppins";
-  position: relative;
+    /* height: 50vw; */
+    font-family: "Poppins";
+    position: relative;
 }
 
 .banner__inner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .banner__inner h2 {
-  position: absolute;
-  color: #b6b6b6;
-  font-size: 19vw;
-  font-weight: 100;
+    position: absolute;
+    color: #b6b6b6;
+    font-size: 19vw;
+    font-weight: 100;
 }
 
 /* section5 */
 #section5 {
-  height: 100vh;
-  font-family: "Netmarble";
+    height: 100vh;
+    font-family: "Netmarble";
 }
 
 .imgcard {
-  /* width: 100%; */
-  /* height: 882px; */
-  border: 1px solid #000;
-  padding: 20px 20px;
-  font-weight: lighter;
-  margin-bottom: 125px;
+    /* width: 100%; */
+    /* height: 882px; */
+    border: 1px solid #000;
+    padding: 20px 20px;
+    font-weight: lighter;
+    margin-bottom: 125px;
 }
 
 .imgcard__mune {
-  font-weight: lighter;
+    font-weight: lighter;
 }
 
 .imgcard__mune ul {
-  display: flex;
+    display: flex;
 }
 
 .imgcard__mune ul li {
-  font-size: 14px;
-  border: 1px solid #000;
-  width: 176px;
+    font-size: 14px;
+    border: 1px solid #000;
+    width: 176px;
 
-  text-align: center;
-  padding: 5px 10px;
-  margin-right: 5px;
+    text-align: center;
+    padding: 5px 10px;
+    margin-right: 5px;
 }
 
 .imgcard__mune ul li:hover {
-  background-color: #d9d9d9;
+    background-color: #d9d9d9;
 }
 
 .imgcard img {
-  padding: 20px 0;
+    padding: 20px 0;
 }
 
 .imgcard h2 {
-  background: #d9d9d9;
-  font-weight: lighter;
-  padding: 10px 20px;
-  font-size: 18px;
-  margin-bottom: 10px;
+    background: #d9d9d9;
+    font-weight: lighter;
+    padding: 10px 20px;
+    font-size: 18px;
+    margin-bottom: 10px;
 }
 .imgcard .imgcard__p1 {
-  background: #d9d9d9;
-  margin-bottom: 10px;
-  padding: 36px 20px;
-  font-size: 18px;
-  line-height: 24.75px;
+    background: #d9d9d9;
+    margin-bottom: 10px;
+    padding: 36px 20px;
+    font-size: 18px;
+    line-height: 24.75px;
 }
 
 .imgcard .imgcard__p2 {
-  background: #d9d9d9;
-  font-size: 18px;
-  padding: 10px 20px;
-  text-align: center;
+    background: #d9d9d9;
+    font-size: 18px;
+    padding: 10px 20px;
+    text-align: center;
 }
 
 /* section6 */
 #section6 {
-  /* height: 50vw; */
-  font-family: "Poppins";
-  position: relative;
+    /* height: 50vw; */
+    font-family: "Poppins";
+    position: relative;
 }
 
 .banner__inner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .banner__inner h2 {
-  position: absolute;
-  color: #b6b6b6;
-  font-size: 19vw;
-  font-weight: 100;
+    position: absolute;
+    color: #b6b6b6;
+    font-size: 19vw;
+    font-weight: 100;
 }
 
 /* section7 */
 #section7 {
-  /* height: 100vh; */
-  font-family: "Netmarble";
-  font-weight: 100;
-  font-size: 18px;
+    /* height: 100vh; */
+    font-family: "Netmarble";
+    font-weight: 100;
+    font-size: 18px;
 }
 
 .text__inner {
-  position: relative;
+    position: relative;
 }
 
 table {
-  border-collapse: collapse;
+    border-collapse: collapse;
 }
 
 table,
 thead tr,
 tbody tr {
-  border-bottom: 1px solid #000;
+    border-bottom: 1px solid #000;
 }
 
 .text__table .text__tr th {
-  font-weight: 100;
-  tab-size: 18px;
-  padding: 10px 10px 50px 10px;
-  text-align: left;
-  opacity: 50%;
+    font-weight: 100;
+    tab-size: 18px;
+    padding: 10px 10px 50px 10px;
+    text-align: left;
+    opacity: 50%;
 }
 
 .text__table .text__tb tr td {
-  text-align: left;
-  padding: 36px 10px 36px 10px;
+    text-align: left;
+    padding: 36px 10px 36px 10px;
 }
 
 /* footer */
 .footer__inner {
-  /* height: 100vh; */
-  font-family: "Poppins";
-  text-align: center;
-  position: relative;
+    /* height: 100vh; */
+    font-family: "Poppins";
+    text-align: center;
+    position: relative;
 }
 
 .footer__title {
-  font-size: 19vw;
-  font-weight: bolder;
-  text-align: center;
+    font-size: 19vw;
+    font-weight: bolder;
+    text-align: center;
 }
 
 .footer__span {
-  font-weight: 100;
-  font-size: 15vw;
-  line-height: 0.77px;
+    font-weight: 100;
+    font-size: 15vw;
+    line-height: 0.77px;
 }
 
 .footer__desc {
-  font-family: "Netmarble";
-  font-weight: 100;
-  font-size: 1.2vw;
-  position: absolute;
-  left: 50%;
-  bottom: -50%;
-  transform: translate(-50%, -50%);
+    font-family: "Netmarble";
+    font-weight: 100;
+    font-size: 1.2vw;
+    position: absolute;
+    left: 50%;
+    bottom: -50%;
+    transform: translate(-50%, -50%);
 }
 
 .footer__icon .i1 {
-  width: 15vw;
-  position: absolute;
-  left: 10%;
-  top: -70px;
-  z-index: -1;
+    width: 15vw;
+    position: absolute;
+    left: 10%;
+    top: -70px;
+    z-index: -1;
 }
 
 .footer__icon .i2 {
-  width: 15vw;
-  position: absolute;
-  right: 10%;
-  top: -70px;
-  z-index: -1;
-  transform: rotate(9deg);
+    width: 15vw;
+    position: absolute;
+    right: 10%;
+    top: -70px;
+    z-index: -1;
+    transform: rotate(9deg);
 }
 
 .footer__icon .i3 {
-  width: 18vw;
-  position: absolute;
-  left: 10%;
-  bottom: -44%;
-  z-index: 1;
-  transform: rotate(20deg);
+    width: 18vw;
+    position: absolute;
+    left: 10%;
+    bottom: -44%;
+    z-index: 1;
+    transform: rotate(20deg);
 }
 
 .footer__icon .i4 {
-  width: 15vw;
-  position: absolute;
-  right: 10%;
-  bottom: -35%;
-  z-index: 1;
-  transform: rotate(353deg);
+    width: 15vw;
+    position: absolute;
+    right: 10%;
+    bottom: -35%;
+    z-index: 1;
+    transform: rotate(353deg);
 }
