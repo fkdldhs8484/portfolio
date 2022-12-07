@@ -165,13 +165,6 @@ nav ul li a:hover::before {
   font-weight: 100;
 }
 
-#renderer {
-  width: 100%;
-  height: 100vh;
-  background: #000;
-  overflow: hidden;
-}
-
 /* section3 */
 #section3 {
   height: 100vh;
