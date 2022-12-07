@@ -271,6 +271,13 @@ nav ul li a:hover::before {
   height: 385px;
 }
 
+#tab-cont .tab-box {
+  width: 683px;
+  height: 385px;
+  margin-left: 15px;
+  overflow-y: scroll;
+}
+
 @media (max-width: 1300px) {
   .card__inner {
     width: 70%;
@@ -297,6 +304,11 @@ nav ul li a:hover::before {
   color: #b6b6b6;
   font-size: 19vw;
   font-weight: 100;
+}
+
+.banner__inner iframe {
+  width: 100%;
+  height: 60vh;
 }
 
 /* section5 */
