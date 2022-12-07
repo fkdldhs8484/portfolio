@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="assets/css/fonts.css" />
     <link rel="stylesheet" href="assets/css/reset.css" />
     <link rel="stylesheet" href="assets/css/common.css" />
+    <link rel="stylesheet" href="assets/css/dracula.css" />
 
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
@@ -29,7 +30,7 @@
         <h1>develpoer <em>publihser and front develpoer</em></h1>
         <nav>
           <ul>
-            <li class="active"><a href="#section1">HOME</a></li>
+            <li><a href="#section1">HOME</a></li>
             <li><a href="#section2">WORK</a></li>
             <li><a href="#section4">SCRIPT</a></li>
             <li><a href="#section6">STUDY</a></li>
@@ -42,8 +43,8 @@
     <main id="mainType">
       <section id="section1">
         <div class="text">
-          <div class="animation1">front</div>
-          <div class="animation2">developer</div>
+          <div class="section1_t1">front</div>
+          <div class="section1_t2">developer</div>
         </div>
         <div class="img" aria-hidden="true">
           <img class="img1" src="assets/img/main_icon_01.png" alt="bg01" />
@@ -58,17 +59,19 @@
       </section>
 
       <section id="section2">
-        <div class="banner__inner white">
+        <div class="banner__inner">
           <h2>WORK</h2>
-          <iframe
-            src="https://webstoryboy.github.io/web2022/webstoryboy_three/three.js/index78.html"
-            frameborder="0"
-            allowfullscreen=""
-          ></iframe>
+          <div class="iframe">
+            <iframe
+              src="https://webstoryboy.github.io/web2022/webstoryboy_three/three.js/index78.html"
+              frameborder="0"
+              allowfullscreen=""
+            ></iframe>
+          </div>
         </div>
       </section>
 
-      <section id="section3 " class="section">
+      <section id="section3">
         <div class="card__inner container">
           <article class="card">
             <div id="card__btn">
@@ -88,9 +91,55 @@
                   alt="이미지"
                 />
               </div>
-              <div class="tab-box"></div>
-              <div class="tab-box"></div>
-              <div class="tab-box">eee</div>
+              <div class="tab-box">
+                <pre><code>
+dddddddddddd
+</code></pre>
+              </div>
+              <div class="tab-box">
+                <pre><code class="language-js">
+  //운영체제 정보 알아내기
+  let os = navigator.userAgent.toLowerCase();
+  let sw = screen.width;
+  let sh = screen.height;
+  let infor = document.getElementById("infor");
+
+  if (os.indexOf("windows") >= 0) {
+    infor.innerHTML =
+      "현재 윈도우를 사용하고 있으며, 화면 크기는 " +
+      sw +
+      "x" +
+      sh +
+      " 입니다.";
+  } else if (os.indexOf("macintosh") >= 0) {
+    infor.innerHTML =
+      "현재 맥을 사용하고 있으며, 화면 크기는 " +
+      sw +
+      "x" +
+      sh +
+      " 입니다.";
+  } else if (os.indexOf("iphone") >= 0) {
+    infor.innerHTML =
+      "현재 아이폰을 사용하고 있으며, 화면 크기는 " +
+      sw +
+      "x" +
+      sh +
+      " 입니다.";
+  } else if (os.indexOf("android") >= 0) {
+    infor.innerHTML =
+      "현재 안드로이드 폰을 사용하고 있으며, 화면 크기는 " +
+      sw +
+      "x" +
+      sh +
+      " 입니다.";
+  }
+</code></pre>
+              </div>
+              <div class="tab-box">
+                <pre><code>
+dddddddddddd
+</code></pre>
+              </div>
             </div>
 
             <div class="card__box">
@@ -256,7 +305,7 @@
         </div>
       </section>
 
-      <section id="section5 " class="section">
+      <section id="section5">
         <div class="imgcard__inner container">
           <article class="imgcard">
             <div class="imgcard__mune">
@@ -321,22 +370,22 @@
         </div>
       </section>
 
-      <section id="section6" class="">
+      <section id="section6">
         <div class="banner__inner">
           <h2>study</h2>
           <img src="assets/img/footer01@2x.png" alt="이미지" />
         </div>
       </section>
 
-      <section id="section7" class="section">
+      <section id="section7">
         <div class="text__inner container">
           <table class="text__table">
             <colgroup>
-              <col style="width: 10%" />
+              <col style="width: 8%" />
               <col style="width: 13%" />
-              <col style="width: 13%" />
-              <col style="width: 19%" />
-              <col style="width: 5%" />
+              <col style="width: 11%" />
+              <col style="width: 17%" />
+              <col style="width: 3%" />
             </colgroup>
             <thead class="text__th">
               <tr class="text__tr">
@@ -499,11 +548,69 @@
       src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"
     ></script>
 
-    <script>
-      let t1 = gsap.timeline({ defaults: { duration: 1 } });
+    <script src="assets/js/highlight.min.js"></script>
+    <script src="assets/js/common.js"></script>
 
-      t1.from(".animation1", { y: 100, opacity: 0 });
-      t1.from(".animation2", { y: 100, opacity: 0 }, "-=0.5");
+    <script>
+      const images = [...document.querySelectorAll(".text ,.footer__inner")];
+
+      const lerp = (a, b, n) => (1 - n) * a + n * b;
+      const map = (x, a, b, c, d) => ((x - a) * (d - c)) / (b - a) + c;
+
+      const getMousePosition = (e) => {
+        let posX = e.clientX;
+        let posY = e.clientY;
+
+        return {
+          x: posX,
+          y: posY,
+        };
+      };
+
+      let mousePos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+      window.addEventListener(
+        "mousemove",
+        (e) => (mousePos = getMousePosition(e))
+      );
+
+      gsap.fromTo(
+        "img",
+        {
+          scale: 1.2,
+          autoAlpha: 0,
+          ease: "power3.inOut",
+        },
+        {
+          scale: 1,
+          autoAlpha: 1,
+          stagger: 0.1,
+          duration: 2.5,
+        }
+      );
+
+      images.forEach((img) => {
+        let values = { x: 0, y: 0 };
+        const xStart = gsap.utils.random(16, 64);
+        const yStart = gsap.utils.random(-16, 64);
+
+        const render = () => {
+          values.x = lerp(
+            values.x,
+            map(mousePos.x, 0, window.innerWidth, -xStart, xStart),
+            0.07
+          );
+
+          values.y = lerp(
+            values.y,
+            map(mousePos.y, 0, window.innerHeight, -yStart, yStart),
+            0.07
+          );
+          gsap.set(img, { x: values.x, y: values.y });
+
+          requestAnimationFrame(render);
+        };
+        render();
+      });
     </script>
 
     <script>
@@ -519,26 +626,26 @@
     </script>
 
     <script>
-      var tabBtn = $("#card__btn > ul > li"); //각각의 버튼을 변수에 저장
-      var tabCont = $("#tab-cont > div"); //각각의 콘텐츠를 변수에 저장
-
-      //컨텐츠 내용을 숨겨주세요!
-      tabCont.hide().eq(0).show();
-
-      tabBtn.click(function () {
-        var target = $(this); //버튼의 타겟(순서)을 변수에 저장
-        var index = target.index(); //버튼의 순서를 변수에 저장
-        tabBtn.removeClass("active"); //버튼의 클래스를 삭제
-        target.addClass("active"); //타겟의 클래스를 추가
-        tabCont.css("display", "none");
-        tabCont.eq(index).css("display", "block");
+      // 글씨 쪼개기(다중이)
+      document.querySelectorAll(".section1_t1").forEach((text) => {
+        let splitText = text.innerText;
+        let splitWrap = splitText
+          .split("")
+          .join("</span><span aria-hidden='true'>");
+        splitWrap = "<span>" + splitWrap + "</span>";
+        text.innerHTML = splitWrap;
+        text.setAttribute("aria-label", splitText);
       });
 
-      $(document).ready(function () {
-        $("ul li ").click(function () {
-          $("li").removeClass("active");
-          $(this).addClass("active");
-        });
+      gsap.from(".section1_t1", {
+        ease: "sine.inOut",
+        y: -10,
+        duration: 1,
+        stagger: {
+          repeat: -1,
+          yoyo: true,
+          each: 0.15,
+        },
       });
     </script>
   </body>
