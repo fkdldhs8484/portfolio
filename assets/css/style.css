@@ -74,7 +74,6 @@ nav ul li a:hover::before {
 }
 #section1 .text > div:first-child {
   font-weight: 900;
-  display: inline-flex;
 }
 #section1 .text > div:last-child {
   font-weight: 100;
