@@ -1,102 +1,186 @@
-pre {
+/* PrismJS 1.22.0
+https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript+css-extras&plugins=line-numbers */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: black;
+    background: none;
+    text-shadow: 0 1px white;
+    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    font-size: 1em;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
 }
-pre code.hljs {
-  display: block;
-  /* overflow-x: auto; */
-  padding: 20px;
-  font-family: "NexonLv1Gothic";
-  line-height: 1.6;
-  /* margin-bottom: 20px; */
-  border-radius: 5px;
-  height: 100%;
+
+pre[class*="language-"]::-moz-selection,
+pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection,
+code[class*="language-"] ::-moz-selection {
+    text-shadow: none;
+    background: #b3d4fc;
 }
-code.hljs {
-  padding: 3px 5px;
+
+pre[class*="language-"]::selection,
+pre[class*="language-"] ::selection,
+code[class*="language-"]::selection,
+code[class*="language-"] ::selection {
+    text-shadow: none;
+    background: #b3d4fc;
 }
-.hljs {
-  color: #e9e9f4;
-  background: #282936;
+
+@media print {
+    code[class*="language-"],
+    pre[class*="language-"] {
+        text-shadow: none;
+    }
 }
-.hljs ::selection,
-.hljs::selection {
-  background-color: #4d4f68;
-  color: #e9e9f4;
+
+/* Code blocks */
+pre[class*="language-"] {
+    padding: 1em;
+    margin: 0.5em 0;
+    overflow: auto;
 }
-.hljs-comment {
-  color: #626483;
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    /* background: #fff; */
 }
-.hljs-tag {
-  color: #62d6e8;
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+    padding: 0.1em;
+    border-radius: 0.3em;
+    white-space: normal;
 }
-.hljs-operator,
-.hljs-punctuation,
-.hljs-subst {
-  color: #e9e9f4;
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: slategray;
 }
-.hljs-operator {
-  opacity: 0.7;
+
+.token.punctuation {
+    color: #999;
 }
-.hljs-bullet,
-.hljs-deletion,
-.hljs-name,
-.hljs-selector-tag,
-.hljs-template-variable,
-.hljs-variable {
-  color: #ea51b2;
+
+.token.namespace {
+    opacity: 0.7;
 }
-.hljs-attr,
-.hljs-link,
-.hljs-literal,
-.hljs-number,
-.hljs-symbol,
-.hljs-variable.constant_ {
-  color: #b45bcf;
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #905;
 }
-.hljs-class .hljs-title,
-.hljs-title,
-.hljs-title.class_ {
-  color: #00f769;
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #690;
 }
-.hljs-strong {
-  font-weight: 700;
-  color: #00f769;
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: #9a6e3a;
+    /* This background color was intended by the author of this theme. */
+    background: hsla(0, 0%, 100%, 0.5);
 }
-.hljs-addition,
-.hljs-code,
-.hljs-string,
-.hljs-title.class_.inherited__ {
-  color: #ebff87;
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: #07a;
 }
-.hljs-built_in,
-.hljs-doctag,
-.hljs-keyword.hljs-atrule,
-.hljs-quote,
-.hljs-regexp {
-  color: #a1efe4;
+
+.token.function,
+.token.class-name {
+    color: #dd4a68;
 }
-.hljs-attribute,
-.hljs-function .hljs-title,
-.hljs-section,
-.hljs-title.function_,
-.ruby .hljs-property {
-  color: #62d6e8;
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: #e90;
 }
-.diff .hljs-meta,
-.hljs-keyword,
-.hljs-template-tag,
-.hljs-type {
-  color: #b45bcf;
+
+.token.important,
+.token.bold {
+    font-weight: bold;
 }
-.hljs-emphasis {
-  color: #b45bcf;
-  font-style: italic;
+.token.italic {
+    font-style: italic;
 }
-.hljs-meta,
-.hljs-meta .hljs-keyword,
-.hljs-meta .hljs-string {
-  color: #00f769;
+
+.token.entity {
+    cursor: help;
 }
-.hljs-meta .hljs-keyword,
-.hljs-meta-keyword {
-  font-weight: 700;
+
+pre[class*="language-"].line-numbers {
+    position: relative;
+    padding-left: 3.8em;
+    counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+    position: relative;
+    white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    font-size: 100%;
+    left: -3.8em;
+    width: 3em; /* works for line-numbers below 1000 lines */
+    letter-spacing: -1px;
+    border-right: 1px solid #999;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.line-numbers-rows > span {
+    display: block;
+    counter-increment: linenumber;
+}
+
+.line-numbers-rows > span:before {
+    content: counter(linenumber);
+    color: #999;
+    display: block;
+    padding-right: 0.8em;
+    text-align: right;
 }

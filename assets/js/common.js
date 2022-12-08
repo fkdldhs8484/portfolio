@@ -1,21 +1,78 @@
-hljs.highlightAll();
-
 // 탭 메뉴
-const tabBtn = document.querySelectorAll("#card__btn > ul > li");
-const tabCont = document.querySelectorAll("#tab-cont > div");
 
-tabBtn.forEach((e, i) => {
-  e.addEventListener("click", (event) => {
-    event.preventDefault();
+$(".c1 .list li").click(function (e) {
+    e.preventDefault();
+    let target = $(this);
+    let index = target.index();
+    $(".list li").removeClass("active");
+    target.addClass("active");
 
-    tabBtn.forEach((e) => {
-      e.classList.remove("active");
-    });
-    e.classList.add("active");
+    $(".c1 #tab-cont > div").hide();
+    $(".c1 #tab-cont > div").eq(index).show();
+});
 
-    tabCont.forEach((div) => {
-      div.style.display = "none";
-    });
-    tabCont[i].style.display = "block";
-  });
+$(".c2 .list li").click(function (e) {
+    e.preventDefault();
+    let target = $(this);
+    let index = target.index();
+    $(".list li").removeClass("active");
+    target.addClass("active");
+
+    $(".c2 #tab-cont > div").hide();
+    $(".c2 #tab-cont > div").eq(index).show();
+});
+
+$(".c3 .list li").click(function (e) {
+    e.preventDefault();
+    let target = $(this);
+    let index = target.index();
+    $(".list li").removeClass("active");
+    target.addClass("active");
+
+    $(".c3 .#tab-cont > div").hide();
+    $(".c3 .#tab-cont > div").eq(index).show();
+});
+
+$(".c4 .list li").click(function (e) {
+    e.preventDefault();
+    let target = $(this);
+    let index = target.index();
+    $(".list li").removeClass("active");
+    target.addClass("active");
+
+    $(".c4 #tab-cont > div").hide();
+    $(".c4 #tab-cont > div").eq(index).show();
+});
+
+$(".c5 .list li").click(function (e) {
+    e.preventDefault();
+    let target = $(this);
+    let index = target.index();
+    $(".list li").removeClass("active");
+    target.addClass("active");
+
+    $(".c5 #tab-cont > div").hide();
+    $(".c5 #tab-cont > div").eq(index).show();
+});
+
+$(".c6 .list li").click(function (e) {
+    e.preventDefault();
+    let target = $(this);
+    let index = target.index();
+    $(".list li").removeClass("active");
+    target.addClass("active");
+
+    $(".c6 #tab-cont > div").hide();
+    $(".c6 #tab-cont > div").eq(index).show();
+});
+
+$(".c7 .list li").click(function (e) {
+    e.preventDefault();
+    let target = $(this);
+    let index = target.index();
+    $(".list li").removeClass("active");
+    target.addClass("active");
+
+    $(".c7 #tab-cont > div").hide();
+    $(".c7 #tab-cont > div").eq(index).show();
 });
