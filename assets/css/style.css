@@ -1,34 +1,31 @@
 /* header */
-
-.header__inner {
+#header {
   position: fixed;
   left: 0;
-  top: 0;
+  top: -100px;
   width: 100%;
   z-index: 10000;
   display: flex;
   font-family: "Abel";
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(5px);
+  padding: 10px 20px 10px 20px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
 }
-
-.header__inner h1 {
-  font-size: 26px;
-}
-
-.header__inner em {
+#header h1 em {
   font-size: 0.5em;
   padding-left: 130px;
 }
 
-.header__inner li {
-  display: inline-block;
+#header nav {
+  padding-right: 50px;
 }
 
-.header__inner li a {
+#header nav li {
+  display: inline-block;
+}
+#header nav li a {
   padding: 10px;
   text-transform: uppercase;
 }
@@ -70,13 +67,19 @@ nav ul li a:hover::before {
   line-height: 0.79;
   font-family: "Poppins";
   text-transform: uppercase;
-  display: inline-block;
 }
-#section1 .text > div:first-child {
+#section1 .text > .txt1 {
   font-weight: 900;
 }
-#section1 .text > div:last-child {
+#section1 .text > .txt2 {
   font-weight: 100;
+}
+#section1 .text > div {
+  overflow: hidden;
+}
+#section1 .text > div > span {
+  display: inline-block;
+  transform: translateY(300px);
 }
 #section1 .ment {
   position: absolute;
@@ -85,29 +88,36 @@ nav ul li a:hover::before {
   bottom: 15px;
   font-family: "Cafe24SsurroundAir";
 }
+#section1 .img {
+  opacity: 0;
+}
 #section1 .img > img {
   position: absolute;
   z-index: 1000;
 }
 #section1 .img1 {
-  width: 11vw;
+  width: 10vw;
   left: 10vw;
   top: 6vw;
+  transform: rotate(-25deg);
 }
 #section1 .img2 {
-  width: 12vw;
+  width: 14vw;
   right: 10vw;
   top: 4vw;
+  transform: rotate(25deg);
 }
 #section1 .img3 {
-  width: 14vw;
+  width: 15vw;
   left: 10vw;
-  bottom: 5vw;
+  bottom: 4vw;
+  transform: rotate(25deg);
 }
 #section1 .img4 {
   width: 15vw;
   right: 10vw;
   bottom: 5vw;
+  transform: rotate(55deg);
 }
 
 /* section2 */
@@ -235,7 +245,7 @@ nav ul li a:hover::before {
   position: absolute;
   left: 12px;
   top: 55px;
-  z-index: -10000;
+  /* z-index: -10000; */
 }
 
 #tab-cont > div {
@@ -253,17 +263,10 @@ nav ul li a:hover::before {
 
 #tab-cont .tab-box {
   width: 687px;
-  height: 346px;
+  height: 390px;
   padding-left: 13px;
 
   overflow-y: scroll;
-
-  -ms-overflow-style: none; /* 인터넷 익스플로러 */
-  scrollbar-width: none; /* 파이어폭스 */
-}
-
-#tab-cont .tab-box::-webkit-scrollbar {
-  display: none; /* 크롬, 사파리, 오페라, 엣지 */
 }
 
 @media (max-width: 1300px) {
@@ -272,14 +275,16 @@ nav ul li a:hover::before {
     display: flex;
     justify-content: center;
   }
+  .card {
+  }
 }
 
 /* section4 */
 #section4 {
-  /* height: 50vw; */
   font-family: "Poppins";
-  position: relative;
-  background: #e5e4e3;
+  position: sticky;
+  z-index: -10000;
+  top: 0;
 }
 
 /* section5 */
@@ -349,9 +354,10 @@ nav ul li a:hover::before {
 
 /* section6 */
 #section6 {
-  /* height: 50vw; */
   font-family: "Poppins";
-  position: relative;
+  position: sticky;
+  z-index: -10000;
+  top: 0;
 }
 
 /* section7 */
