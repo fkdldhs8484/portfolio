@@ -169,7 +169,7 @@ nav ul li a:hover::before {
 }
 
 .card {
-  width: 720px;
+  width: 45vw;
   border: 1px solid #000;
   text-align: center;
   padding: 17px 10px 17px 10px;
@@ -206,7 +206,7 @@ nav ul li a:hover::before {
 }
 
 .card img {
-  width: 715px;
+  width: 45vw;
   height: 540px;
   margin-bottom: 32px;
 }
@@ -252,31 +252,21 @@ nav ul li a:hover::before {
   position: absolute;
   left: 0;
   top: 20px;
-  width: 715px;
+  width: 45vw;
   height: 540px;
 }
 
 #tab-cont .tab-img01 {
-  width: 683px;
+  width: 45vw;
   height: 385px;
 }
 
 #tab-cont .tab-box {
-  width: 687px;
+  width: 45vw;
   height: 390px;
   padding-left: 13px;
 
   overflow-y: scroll;
-}
-
-@media (max-width: 1300px) {
-  .card__inner {
-    width: 70%;
-    display: flex;
-    justify-content: center;
-  }
-  .card {
-  }
 }
 
 /* section4 */

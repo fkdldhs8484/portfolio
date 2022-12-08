@@ -29,10 +29,10 @@
       <h1>portfolil <em>publihser and front develpoer</em></h1>
       <nav>
         <ul>
-          <li><a href="#">home</a></li>
-          <li><a href="#">work</a></li>
-          <li><a href="#">study</a></li>
-          <li><a href="#">contact</a></li>
+          <li><a href="#section1">home</a></li>
+          <li><a href="#section2">work</a></li>
+          <li><a href="#section4">SCRIPT</a></li>
+          <li><a href="#section6">study</a></li>
         </ul>
       </nav>
     </header>
@@ -105,7 +105,9 @@
                   alt="이미지"
                 />
               </div>
-              <div class="tab-box"></div>
+              <div class="tab-box">
+                <pre><code class="language-js"></code></pre>
+              </div>
               <div class="tab-box">
                 <pre><code class="language-js">
   //운영체제 정보 알아내기
@@ -569,7 +571,7 @@ dddddddddddd
 
     <script>
       //스크롤 이동
-      document.querySelectorAll(".header__inner nav ul li a").forEach((li) => {
+      document.querySelectorAll("#header > nav >ul > li > a").forEach((li) => {
         li.addEventListener("click", (e) => {
           e.preventDefault();
           document.querySelector(li.getAttribute("href")).scrollIntoView({
@@ -698,5 +700,7 @@ dddddddddddd
         render();
       });
     </script>
+
+    <script></script>
   </body>
 </html>
