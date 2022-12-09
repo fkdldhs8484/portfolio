@@ -1878,8 +1878,9 @@
     <!-- footer -->
     <footer id="footer__wrap section8" class="section">
       <div class="footer__inner container">
-        <h2 class="moveImg footer__title">end</h2>
-        <span class="moveImg footer__span">developer</span>
+        <div class="moveImg footer__title split">End</div>
+        <div class="moveImg footer__span split">developer</div>
+
         <div class="footer__icon">
           <div class="i1 moveImg">
             <img src="assets/img/main_icon_01.png" alt="별" />
@@ -2013,7 +2014,7 @@
       );
 
       gsap.fromTo(
-        "#section1 > .img > img ",
+        "#section1 > .img > img",
         {
           scale: 1.2,
           autoAlpha: 0,
