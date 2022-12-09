@@ -164,11 +164,12 @@ nav ul li a:hover::before {
 .card__inner {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
+  padding-bottom: 120px;
 }
 
 .card {
-  width: 43vw;
+  width: 36vw;
   border: 1px solid #000;
   height: 850px;
   padding: 17px 10px 17px 10px;
@@ -183,6 +184,7 @@ nav ul li a:hover::before {
   opacity: 0;
   transform: translateX(-100px);
   transition: 0.5s all;
+  margin-right: 10px;
 }
 
 .c2,
@@ -207,7 +209,7 @@ nav ul li a:hover::before {
 }
 #card__btn ul li {
   border: 1px solid #000;
-  width: 17vw;
+  width: 176px;
 
   font-weight: 100;
   cursor: pointer;
@@ -360,6 +362,16 @@ nav ul li a:hover::before {
   position: absolute;
   right: 0;
   top: 0;
+}
+
+@media (max-width: 790px) {
+  .card__inner {
+    width: 100%;
+    display: block;
+  }
+  .card__inner .card {
+    width: 96%;
+  }
 }
 
 /* section4 */
