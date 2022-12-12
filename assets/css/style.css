@@ -534,6 +534,11 @@ nav ul li a:hover::before {
   position: sticky;
   z-index: -10000;
   top: 0;
+  background: #000;
+}
+#canvas {
+  width: 100%;
+  height: 100%;
 }
 
 /* section7 */
@@ -677,4 +682,17 @@ tbody.show {
   left: 50%;
   transform: translateX(-50%);
   bottom: 120px;
+}
+
+.footer__inner > .footer__img {
+  -webkit-animation: rotation 20s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
 }
