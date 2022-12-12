@@ -465,7 +465,7 @@ nav ul li a:hover::before {
   box-sizing: border-box;
   overflow: hidden;
   display: none;
-
+  background: #fff;
   overflow-y: scroll;
 }
 
