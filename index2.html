@@ -2286,7 +2286,7 @@ cursor: pointer; 커서를 손가락 모양으로.. */
               <col style="width: 17%" />
               <col style="width: 3%" />
             </colgroup>
-            <thead class="text__th text__t">
+            <thead class="text__th">
               <tr class="text__tr">
                 <th>YEAR</th>
                 <th>RECODE</th>
@@ -2295,34 +2295,34 @@ cursor: pointer; 커서를 손가락 모양으로.. */
                 <th>LINK</th>
               </tr>
             </thead>
-            <tbody class="text__tb text__t">
+            <tbody class="text__tb">
               <tr>
                 <td>2022</td>
                 <td>리액트 윹유툽 크론 코딩</td>
                 <td>프론트앤드</td>
                 <td>유튜브 API를 이용하여 사이트를 구현함</td>
-                <td><a href="#">바로가기</a></td>
+                <td><a class="text-btn" href="#">바로가기</a></td>
               </tr>
               <tr>
                 <td>2022</td>
                 <td>리액트 윹api 코딩</td>
                 <td>프론트앤드</td>
                 <td>유튜브 API를 이용하여 사이트를 구현함</td>
-                <td><a href="#">바로가기</a></td>
+                <td><a class="text-btn" href="#">바로가기</a></td>
               </tr>
               <tr>
                 <td>2022</td>
                 <td>뷰 api 코딩</td>
                 <td>프론트앤드</td>
                 <td>유튜브 API를 이용하여 사이트를 구현함</td>
-                <td><a href="#">바로가기</a></td>
+                <td><a class="text-btn" href="#">바로가기</a></td>
               </tr>
               <tr>
                 <td>2022</td>
                 <td>서치 이펙트</td>
                 <td>프론트앤드</td>
                 <td>검색 이펙트</td>
-                <td><a href="#">바로가기</a></td>
+                <td><a class="text-btn" href="#">바로가기</a></td>
               </tr>
               <tr>
                 <td>2022</td>
@@ -2331,6 +2331,7 @@ cursor: pointer; 커서를 손가락 모양으로.. */
                 <td>스크롤 부드러운 효과</td>
                 <td>
                   <a
+                    class="text-btn"
                     href="https://stately-gumdrop-7b8776.netlify.app/javascript/effect/parallaxeffect01"
                     >바로가기</a
                   >
@@ -2343,6 +2344,7 @@ cursor: pointer; 커서를 손가락 모양으로.. */
                 <td>여러가지 게임 이펙트</td>
                 <td>
                   <a
+                    class="text-btn"
                     href="https://stately-gumdrop-7b8776.netlify.app/javascript/effect/gameeffect01"
                     >바로가기</a
                   >
@@ -2355,6 +2357,7 @@ cursor: pointer; 커서를 손가락 모양으로.. */
                 <td>HTML 총 정리 사이트</td>
                 <td>
                   <a
+                    class="text-btn"
                     href="https://stately-gumdrop-7b8776.netlify.app/html/alphabet.html"
                     >바로가기</a
                   >
@@ -2367,6 +2370,7 @@ cursor: pointer; 커서를 손가락 모양으로.. */
                 <td>CSS 총 정리 사이트</td>
                 <td>
                   <a
+                    class="text-btn"
                     href="https://stately-gumdrop-7b8776.netlify.app/css/index.html"
                     >바로가기</a
                   >
@@ -2379,6 +2383,7 @@ cursor: pointer; 커서를 손가락 모양으로.. */
                 <td>데이터 소프트 웨어 사이트</td>
                 <td>
                   <a
+                    class="text-btn"
                     href="https://stately-gumdrop-7b8776.netlify.app/sql/index.html"
                     >바로가기</a
                   >
@@ -2391,6 +2396,7 @@ cursor: pointer; 커서를 손가락 모양으로.. */
                 <td>스케일러블 벡터 그래픽스 정리 사이트</td>
                 <td>
                   <a
+                    class="text-btn"
                     href="https://stately-gumdrop-7b8776.netlify.app/animation/svg.html"
                     >바로가기</a
                   >
@@ -2403,6 +2409,7 @@ cursor: pointer; 커서를 손가락 모양으로.. */
                 <td>스케일러블 벡터 그래픽스 css 정리 사이트</td>
                 <td>
                   <a
+                    class="text-btn"
                     href="https://stately-gumdrop-7b8776.netlify.app/animation/css.html"
                     >바로가기</a
                   >
@@ -2623,7 +2630,7 @@ cursor: pointer; 커서를 손가락 모양으로.. */
 
         /* section 7 */
 
-        $(".text__t").each(function () {
+        $(".text__tr, .text__tb ").each(function () {
           if (w_Scroll > $(this).offset().top - w_Height / 2) {
             $(this).addClass("show");
           } else {

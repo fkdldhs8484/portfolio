@@ -573,26 +573,33 @@ tbody tr {
   padding: 36px 10px 36px 10px;
 }
 
-.text__th {
+.text__tr {
   opacity: 0;
-  transform: translateY(100px);
-  transition: 0.5s all;
+  transform: translateY(-50px);
+  transition: 1s all;
 }
 
-.text__th.show {
+.text__tr.show {
   opacity: 1;
   transform: translateY(0);
 }
 
 tbody {
   opacity: 0;
-  transform: translateY(100px);
-  transition: 0.5s all;
+  transform: translateY(-50px);
+  transition: 2s all;
 }
 
 tbody.show {
   opacity: 1;
   transform: translateY(0);
+}
+
+.text-btn:hover {
+  width: 5px;
+
+  border-radius: 100%;
+  background: #d4d4d3;
 }
 
 /* footer */
