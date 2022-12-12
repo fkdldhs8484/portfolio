@@ -643,10 +643,7 @@ tbody.show {
   transform: translateY(0);
 }
 
-.text-btn:hover {
-  width: 5px;
-
-  border-radius: 100%;
+.text__tb tr:hover {
   background: #d4d4d3;
 }
 
