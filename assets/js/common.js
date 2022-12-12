@@ -79,7 +79,7 @@ $(".c7 .list li").click(function (e) {
 
 // section 5
 
-$(".imgcard__mune .list li").click(function (e) {
+$(".img-c1 .list li").click(function (e) {
   e.preventDefault();
   let target = $(this);
   let index = target.index();
@@ -90,7 +90,7 @@ $(".imgcard__mune .list li").click(function (e) {
   $(".img-c1 #imgcard-tab-cont > div").eq(index).show();
 });
 
-$(".imgcard__mune .list li").click(function (e) {
+$(".img-c2 .list li").click(function (e) {
   e.preventDefault();
   let target = $(this);
   let index = target.index();
@@ -101,7 +101,7 @@ $(".imgcard__mune .list li").click(function (e) {
   $(".img-c2 #imgcard-tab-cont > div").eq(index).show();
 });
 
-$(".imgcard__mune .list li").click(function (e) {
+$(".img-c3 .list li").click(function (e) {
   e.preventDefault();
   let target = $(this);
   let index = target.index();
