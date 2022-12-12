@@ -242,6 +242,7 @@ nav ul li a:hover::before {
 
 .card__box {
   padding-top: 20px;
+  display: contents;
 }
 
 .card__box h2 {
@@ -335,14 +336,17 @@ nav ul li a:hover::before {
 }
 
 #tab-cont .tab-box {
-  width: 100%;
+  width: 96%;
   height: 406px;
-  padding-left: 13px;
+  /* padding-left: 13px; */
   /* box-sizing: border-box; */
   overflow: hidden;
   display: none;
   background: #fff;
   overflow-y: scroll;
+  position: absolute;
+  top: 2.1%;
+  left: 2%;
 }
 
 #tab-cont > div {
@@ -357,7 +361,7 @@ nav ul li a:hover::before {
   background-position: 0 100%;
 }
 
-#tab-cont div:after {
+/* #tab-cont div:after {
   background: radial-gradient(
     circle at right bottom,
     transparent 75%,
@@ -370,7 +374,7 @@ nav ul li a:hover::before {
   position: absolute;
   right: 0;
   top: 0;
-}
+} */
 
 @media (max-width: 790px) {
   .card__inner {
@@ -378,7 +382,7 @@ nav ul li a:hover::before {
     display: block;
   }
   .card__inner .card {
-    width: 96%;
+    width: 93%;
   }
   #tab-cont > .tab-img {
     height: 69%;
