@@ -344,7 +344,7 @@ nav ul li a:hover::before {
 
 #tab-cont .tab-box {
   width: 96%;
-  height: 406px;
+  height: 380px;
   /* padding-left: 13px; */
   /* box-sizing: border-box; */
   overflow: hidden;
@@ -354,6 +354,7 @@ nav ul li a:hover::before {
   position: absolute;
   top: 2.1%;
   left: 2%;
+  box-shadow: inset 0px 1px 3px 2px rgb(0 0 0 / 30%);
 }
 
 #tab-cont > div {
@@ -724,15 +725,4 @@ tbody.show {
   bottom: 120px;
 }
 
-.footer__inner > .footer__img {
-  -webkit-animation: rotation 20s infinite linear;
-}
 
-@-webkit-keyframes rotation {
-  from {
-    -webkit-transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(359deg);
-  }
-}
