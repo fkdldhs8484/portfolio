@@ -2286,7 +2286,7 @@ cursor: pointer; 커서를 손가락 모양으로.. */
               <col style="width: 17%" />
               <col style="width: 3%" />
             </colgroup>
-            <thead class="text__th">
+            <thead class="text__th text__t">
               <tr class="text__tr">
                 <th>YEAR</th>
                 <th>RECODE</th>
@@ -2295,7 +2295,7 @@ cursor: pointer; 커서를 손가락 모양으로.. */
                 <th>LINK</th>
               </tr>
             </thead>
-            <tbody class="text__tb">
+            <tbody class="text__tb text__t">
               <tr>
                 <td>2022</td>
                 <td>리액트 윹유툽 크론 코딩</td>
@@ -2614,6 +2614,16 @@ cursor: pointer; 커서를 손가락 모양으로.. */
         /* section 5 */
 
         $(".imgcard").each(function () {
+          if (w_Scroll > $(this).offset().top - w_Height / 2) {
+            $(this).addClass("show");
+          } else {
+            $(this).removeClass("show");
+          }
+        });
+
+        /* section 7 */
+
+        $(".text__t").each(function () {
           if (w_Scroll > $(this).offset().top - w_Height / 2) {
             $(this).addClass("show");
           } else {

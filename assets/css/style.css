@@ -573,6 +573,28 @@ tbody tr {
   padding: 36px 10px 36px 10px;
 }
 
+.text__th {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: 0.5s all;
+}
+
+.text__th.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+tbody {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: 0.5s all;
+}
+
+tbody.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* footer */
 #footer__wrap {
   height: 100vh;
