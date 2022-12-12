@@ -72,16 +72,8 @@
       <!-- section1 -->
 
       <section id="section2">
-        <div class="banner__inner">
-          <h2>WORK</h2>
-          <div class="iframe">
-            <iframe
-              src="https://webstoryboy.github.io/web2022/webstoryboy_three/three.js/index78.html"
-              frameborder="0"
-              allowfullscreen=""
-            ></iframe>
-          </div>
-        </div>
+        <h2>work</h2>
+        <canvas id="canvas"></canvas>
       </section>
       <!-- section2 -->
 
@@ -1295,16 +1287,8 @@
       <!-- section3 -->
 
       <section id="section4">
-        <div class="banner__inner">
-          <h2>script</h2>
-          <div class="iframe">
-            <iframe
-              src="https://webstoryboy.github.io/web2022/webstoryboy_three/three.js/index78.html"
-              frameborder="0"
-              allowfullscreen=""
-            ></iframe>
-          </div>
-        </div>
+        <h2>script</h2>
+        <canvas id="canvas"></canvas>
       </section>
       <!-- section4 -->
 
@@ -2263,10 +2247,8 @@ cursor: pointer; 커서를 손가락 모양으로.. */
       <!-- section5 -->
 
       <section id="section6">
-        <div class="banner__inner">
-          <h2>study</h2>
-          <canvas id="canvas"></canvas>
-        </div>
+        <h2>study</h2>
+        <canvas id="canvas"></canvas>
       </section>
       <!-- section6 -->
 
@@ -2443,7 +2425,10 @@ cursor: pointer; 커서를 손가락 모양으로.. */
 
     <!-- footer -->
 
-    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
+    <script src="https://jeromeetienne.github.io/threex.terrain/examples/vendor/three.js/build/three-min.js"></script>
+    <script src="https://jeromeetienne.github.io/threex.terrain/examples/vendor/three.js/examples/js/SimplexNoise.js"></script>
+    <script src="https://jeromeetienne.github.io/threex.terrain/threex.terrain.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
 
@@ -2519,15 +2504,14 @@ cursor: pointer; 커서를 손가락 모양으로.. */
         mainTl.to("#header", { duration: 0.7, top: 0, ease: Power1.easeOut });
       }, 2000);
 
-      gsap.to(".banner__inner > h2", {
+      gsap.to(".txt2", {
         yPercent: -40,
         scrollTrigger: {
           scrub: 1,
         },
       });
-
-      gsap.to(".banner__inner > h2", {
-        y: -200,
+      gsap.to("#section2 h2", {
+        yPercent: 200,
         scrollTrigger: {
           scrub: 1,
         },
@@ -2636,12 +2620,11 @@ cursor: pointer; 커서를 손가락 모양으로.. */
 
     <script>
       var renderer = new THREE.WebGLRenderer({
+        canvas: document.querySelector("#canvas"),
         antialias: true,
       });
       renderer.setSize(window.innerWidth, window.innerHeight);
-      document.body.appendChild(renderer.domElement);
-
-      var canvas = document.getElementById("#canvas");
+      // document.body.appendChild(renderer.domElement);
 
       var onRenderFcts = [];
       var scene = new THREE.Scene();
@@ -2682,7 +2665,7 @@ cursor: pointer; 커서를 손가락 모양으로.. */
       mesh.scale.multiplyScalar(10);
 
       onRenderFcts.push(function (delta, now) {
-        mesh.rotation.z += 0.2 * delta;
+        mesh.rotation.z += 0.02 * delta;
       });
       onRenderFcts.push(function () {
         renderer.render(scene, camera);
