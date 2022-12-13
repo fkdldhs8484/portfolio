@@ -20,7 +20,14 @@
   </head>
 
   <body>
-    <!-- loading -->
+    <!-- progress -->
+    <div class="progress" id ="progress">
+		<span class="progress-text"></span> 
+        <div class="loader">
+           <div class="cssload-box-loading"></div>
+        </div> 
+    </div>
+    <!-- // progress -->
 
     <!-- header -->
     <header id="header">
@@ -2689,6 +2696,9 @@ cursor: pointer; 커서를 손가락 모양으로.. */
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="assets/js/jquery-ui.min.js"></script>
+
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
 
     <script
       async
@@ -2735,30 +2745,30 @@ cursor: pointer; 커서를 손가락 모양으로.. */
 
       // requestAnimationFrame(raf);
 
-      setTimeout(() => {
-        let mainTl = gsap.timeline();
+      // setTimeout(() => {
+      //   let mainTl = gsap.timeline();
 
-        mainTl.to(".txt1 span", {
-          duration: 0.4,
-          y: 0,
-          opacity: 1,
-          stagger: 0.1,
-          ease: Circ.easeOut,
-        });
-        mainTl.to(".txt2 span", {
-          duration: 0.4,
-          y: 0,
-          opacity: 1,
-          stagger: 0.1,
-          ease: Circ.easeOut,
-        });
-        mainTl.to("#section1 .img", {
-          duration: 0.7,
-          opacity: 1,
-          ease: Power1.easeOut,
-        });
-        mainTl.to("#header", { duration: 0.7, top: 0, ease: Power1.easeOut });
-      }, 2000);
+      //   mainTl.to(".txt1 span", {
+      //     duration: 0.4,
+      //     y: 0,
+      //     opacity: 1,
+      //     stagger: 0.1,
+      //     ease: Circ.easeOut,
+      //   });
+      //   mainTl.to(".txt2 span", {
+      //     duration: 0.4,
+      //     y: 0,
+      //     opacity: 1,
+      //     stagger: 0.1,
+      //     ease: Circ.easeOut,
+      //   });
+      //   mainTl.to("#section1 .img", {
+      //     duration: 0.7,
+      //     opacity: 1,
+      //     ease: Power1.easeOut,
+      //   });
+      //   mainTl.to("#header", { duration: 0.7, top: 0, ease: Power1.easeOut });
+      // }, 2000);
 
       gsap.to(".txt2", {
         yPercent: -40,
@@ -2884,6 +2894,50 @@ cursor: pointer; 커서를 손가락 모양으로.. */
           }
         });
       });
+    </script>
+
+    <script>
+      function imagesProgress(){
+    var $container = $("#progress"),
+        $progressText = $container.find(".progress-text"),
+        imgLoad = imagesLoaded("body"),	
+        imgTotal = imgLoad.images.length,	
+        imgLoaded = 0,										
+        current = 0,							
+        progressTimer = setInterval(updateProgress, 2000 / 60);	
+
+        imgLoad.on("progress", function(){
+            imgLoaded++;
+        });
+
+    function updateProgress(){
+        var target = ( imgLoaded / imgTotal) * 100;
+
+        current += ( target - current) * 0.1;
+        $progressText.text( Math.floor(current) + '%' );
+
+        if(current >= 100){
+            clearInterval(progressTimer);
+            $container.animate({opacity: '0'},1500,'easeInOutQuint').animate({top: '-100%'},1500);
+            
+            gsap.to("#section1 .text .txt1 span", { duration: 0.4, y: 0, opacity: 1, delay: 2, stagger: 0.1,ease: "Circ.easeOut"});
+            gsap.to(".txt2 span", {duration: 0.4,y: 0,opacity: 1,stagger: 0.1, delay: 3.5, ease: "Circ.easeOut",
+        });
+            gsap.to("#section1 .img", {
+          duration: 0.7,
+          opacity: 1,
+          delay: 4,
+          ease: "Power1.easeOut",
+        });
+            gsap.to("#header", { duration: 0.7, top: 0, delay: 5, ease: "Power1.easeOut" });
+            
+        }
+        if(current > 99.9){
+            current = 100;
+        };
+    };
+};
+imagesProgress();
     </script>
   </body>
 </html>
