@@ -393,19 +393,23 @@ nav ul li a:hover::before {
     width: 93%;
   }
   #tab-cont > .tab-img {
-    height: 65%;
+    height: 53%;
   }
   #tab-cont > .tab-box {
-    height: 65vw;
+    height: 53%;
   }
 }
 
 @media (max-width: 450px) {
   #tab-cont > .tab-img {
-    height: 36%;
+    height: 67%;
   }
   #tab-cont > .tab-box {
-    height: 65vw;
+    height: 67%;
+  }
+
+  .card__desc {
+    height: 36% !important;
   }
 }
 

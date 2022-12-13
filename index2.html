@@ -95,78 +95,159 @@
                   <pre
                     class="line-numbers language-css"
                   ><code class="language-css">
-  //운영체제 정보 알아내기
-  let os = navigator.userAgent.toLowerCase();
-  let sw = screen.width;
-  let sh = screen.height;
-  let infor = document.getElementById("infor");
+&lt;!-- contents --&gt;
+&lt;div id="customizing"&gt;
+  &lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+      &lt;div id="options" class="gridly"&gt;
+        &lt;ul class="filter option-set" data-filter-group="color"&gt;
+          &lt;li&gt;
+            &lt;a href="#filter-color-any" data-filter-value="" class="selected"
+              &gt;ALL&lt;/a
+            &gt;
+          &lt;/li&gt;
+          &lt;li class="webstandard"&gt;
+            &lt;a href="#filter-color-webstandard" data-filter-value=".class"
+              &gt;CLASS&lt;/a
+            &gt;
+          &lt;/li&gt;
+          &lt;li class="webstandard"&gt;
+            &lt;a href="#filter-color-webstandard" data-filter-value=".script"
+              &gt;SCRIPT&lt;/a
+            &gt;
+          &lt;/li&gt;
+          &lt;li class="webstandard"&gt;
+            &lt;a href="#filter-color-webstandard" data-filter-value=".layout"
+              &gt;LAYOUT&lt;/a
+            &gt;
+          &lt;/li&gt;
+          &lt;li class="webstandard"&gt;
+            &lt;a href="#filter-color-webstandard" data-filter-value=".reference"
+              &gt;REFERENCE&lt;/a
+            &gt;
+          &lt;/li&gt;
+          &lt;li class="webstandard"&gt;
+            &lt;a href="#filter-color-webstandard" data-filter-value=".site"
+              &gt;SITE&lt;/a
+            &gt;
+          &lt;/li&gt;
+          &lt;li class="webstandard"&gt;
+            &lt;a href="#filter-color-webstandard" data-filter-value=".animation"
+              &gt;ANIMATION&lt;/a
+            &gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
 
-  if (os.indexOf("windows") >= 0) {
-    infor.innerHTML =
-      "현재 윈도우를 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  } else if (os.indexOf("macintosh") >= 0) {
-    infor.innerHTML =
-      "현재 맥을 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  } else if (os.indexOf("iphone") >= 0) {
-    infor.innerHTML =
-      "현재 아이폰을 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  } else if (os.indexOf("android") >= 0) {
-    infor.innerHTML =
-      "현재 안드로이드 폰을 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  }
-  d
-  d 
-  d
+    &lt;div class="row" id="middle" style="margin-left: 16px"&gt;
+      &lt;div id="container" class="clearfix"&gt;
+        &lt;!-- box --&gt;
+        &lt;section class="color-shape class"&gt;
+          &lt;a href="class/index.html" target="_blank"&gt;
+            &lt;div class="image-wrap"&gt;
+              &lt;div class="hover-wrap"&gt;
+                &lt;span class="overlay-img-donut"&gt;CLASS&lt;/span&gt;
+                &lt;span class="overlay-text-thumb-donut"&gt;클래스&lt;/span&gt;
+                &lt;span class="overlay-text-thumb1-donut"&gt;클래스&lt;/span&gt;
+                &lt;span class="overlay-text-thumb2-donut"&gt;CLASS&lt;/span&gt;
+              &lt;/div&gt;
+              &lt;img src="assets/img/kidaha-01.svg" alt="portfolio" /&gt;
+              &lt;div class="img-text donutImg"&gt;
+                &lt;h5&gt;CLASS&lt;/h5&gt;
+                &lt;p&gt;클래스&lt;/p&gt;
+                &lt;span&gt;CLASS&lt;/span&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/a&gt;
+        &lt;/section&gt;
+        &lt;!-- //box --&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+    
 </code></pre>
                 </div>
                 <div class="tab-box">
                   <pre
                     class="line-numbers language-css"
                   ><code class="language-css">
+  #clock {
+    display: block;
+  }
+
+  .link1 {
+    background: #fff;
+    left: 50%;
+    transform: translatex(-50%);
+    color: #000;
+    display: inline-block;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 10px 30px !important;
+    height: auto !important;
+    box-sizing: border-box;
+    width: auto !important;
+    font-size: 20px !important;
+    margin-top: 36px !important;
+  }
+
+  .link2 {
+    background: #fff;
+    left: 50%;
+    transform: translatex(-50%);
+    color: #000;
+    display: inline-block;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 10px 30px !important;
+    height: auto !important;
+    box-sizing: border-box;
+    width: auto !important;
+    font-size: 20px !important;
+    margin-top: 86px !important;
+  }
+
+  .disqus {
+    margin-right: 20px;
+    margin-top: 40px;
+  }
+</code></pre>
+                </div>
+                <div class="tab-box">
+                  <pre
+                    class="line-numbers language-css"
+                  ><code class="language-css">
+  &lt;script&gt;
   //운영체제 정보 알아내기
   let os = navigator.userAgent.toLowerCase();
   let sw = screen.width;
   let sh = screen.height;
   let infor = document.getElementById("infor");
 
-  if (os.indexOf("windows") >= 0) {
+  if (os.indexOf("windows") &gt;= 0) {
     infor.innerHTML =
       "현재 윈도우를 사용하고 있으며, 화면 크기는 " +
       sw +
       "x" +
       sh +
       " 입니다.";
-  } else if (os.indexOf("macintosh") >= 0) {
+  } else if (os.indexOf("macintosh") &gt;= 0) {
     infor.innerHTML =
       "현재 맥을 사용하고 있으며, 화면 크기는 " +
       sw +
       "x" +
       sh +
       " 입니다.";
-  } else if (os.indexOf("iphone") >= 0) {
+  } else if (os.indexOf("iphone") &gt;= 0) {
     infor.innerHTML =
       "현재 아이폰을 사용하고 있으며, 화면 크기는 " +
       sw +
       "x" +
       sh +
       " 입니다.";
-  } else if (os.indexOf("android") >= 0) {
+  } else if (os.indexOf("android") &gt;= 0) {
     infor.innerHTML =
       "현재 안드로이드 폰을 사용하고 있으며, 화면 크기는 " +
       sw +
@@ -174,125 +255,65 @@
       sh +
       " 입니다.";
   }
-  d
-  d 
-  d
-</code></pre>
-                </div>
-                <div class="tab-box">
-                  <pre
-                    class="line-numbers language-css"
-                  ><code class="language-css">&lt;style&gt;
-  /* mouseType */
-  .mouse__wrap {
-      width: 100%;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      overflow: hidden;
-      flex-direction: column;
-      cursor: none;
-  }
 
-  .mouse__wrap p {
-      font-size: 2vw;
-      line-height: 2;
-      font-weight: 300;
-  }
+  //시간 표현
+  let clock = document.getElementById("clock");
 
-  .mouse__wrap p:last-child {
-      font-size: 3vw;
-      font-weight: 300;
-  }
+  setInterval(function () {
+    clock.innerHTML = new Date().toLocaleTimeString();
+  }, 1000);
 
-  .mouse__wrap p span {
-      border-bottom: 0.15vw dashed orange;
-      color: orange;
-  }
+  $(function () {
+    var $container = $("#container"),
+      filters = {};
 
-  @media (max-width: 800px) {
-      .mouse__wrap p {
-          padding: 0 20px;
-          font-size: 24px;
-          line-height: 1.5;
-          text-align: center;
-          margin-bottom: 10px;
+    $container.isotope({
+      itemSelector: ".color-shape",
+      masonry: {
+        columnWidth: 57,
+      },
+    });
+
+    // filter buttons
+    $(".filter a").click(function () {
+      var $this = $(this);
+      // don't proceed if already selected
+      if ($this.hasClass("selected")) {
+        return;
       }
 
-      .mouse__wrap p:last-child {
-          font-size: 40px;
-          line-height: 1.5;
-          text-align: center;
-          word-break: keep-all;
+      var $optionSet = $this.parents(".option-set");
+      // change selected class
+      $optionSet.find(".selected").removeClass("selected");
+      $this.addClass("selected");
+
+      // store filter value in object
+      // i.e. filters.color = 'red'
+      var group = $optionSet.attr("data-filter-group");
+      filters[group] = $this.attr("data-filter-value");
+      // convert object into array
+      var isoFilters = [];
+      for (var prop in filters) {
+        isoFilters.push(filters[prop]);
       }
-  }
+      var selector = isoFilters.join("");
+      $container.isotope({
+        filter: selector,
+      });
 
-  /* 커서 */
-  .mouse__cursor {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      border: 3px solid #fff;
-      background-color: rgba(255, 255, 255, 0.1);
-      user-select: none;
-      pointer-events: none;
-      transition:
-          background-color 0.3s,
-          border-color 0.3s,
-          transform 0.6,
-          border-radius 0.3s;
-  }
+      return false;
+    });
 
-  .mouse__cursor.style1 {
-      background-color: rgba(255, 165, 0, 0.4);
-      border-color: orange;
-  }
+    $(".tit_btn").on("click", function (e) {
+      e.preventDefault();
+      $(".nav_container").toggleClass("on");
+    });
 
-  .mouse__cursor.style2 {
-      background-color: rgba(140, 0, 255, 0.4);
-      border-color: rgb(140, 0, 255);
-      transform: scale(2) rotateY(720deg);
-  }
-
-  .mouse__cursor.style3 {
-      background-color: rgb(0, 47, 255, 0.4);
-      border-color: rgb(0, 47, 255);
-      transform: scale(1.5) rotateX(45deg);
-  }
-
-  .mouse__cursor.style4 {
-      background-color: rgb(0., 47, 255, 0.4);
-      border-color: rgb(0, 47, 255);
-      transform: scale(10);
-  }
-
-  .mouse__cursor.style5 {
-      background-color: rgb(255, 0, 85, 0.4);
-      border-color: rgb(255, 0, 85);
-      transform: scale(0.1);
-  }
-
-  .mouse__cursor.style6 {
-      background-color: rgb(255, 81, 0, 0.4);
-      border-color: rgb(255, 81, 0);
-      border-radius: 0;
-      transform: scale(5);
-  }
-
-  .mouse__info {
-      position: absolute;
-      left: 20px;
-      bottom: 10px;
-      font-size: 14px;
-      line-height: 1.6;
-      color: #fff;
-  }
-&lt;/style&gt;
+    $(".click").click(function () {
+      $(".view").fadeToggle();
+    });
+  });
+&lt;/script&gt; 
 </code></pre>
                 </div>
               </div>
