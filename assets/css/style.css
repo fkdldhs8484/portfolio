@@ -391,25 +391,32 @@ nav ul li a:hover::before {
   }
   .card__inner .card {
     width: 93%;
+    height: 75vh;
   }
   #tab-cont > .tab-img {
     height: 53%;
   }
   #tab-cont > .tab-box {
     height: 53%;
+  }
+  .card__box h2 {
+    font-size: 3vw;
+  }
+  .card__box .card_p1 {
+    font-size: 3.5vw;
   }
 }
 
 @media (max-width: 450px) {
   #tab-cont > .tab-img {
-    height: 67%;
+    height: 79%;
   }
   #tab-cont > .tab-box {
-    height: 67%;
+    height: 79%;
   }
 
   .card__desc {
-    height: 36% !important;
+    height: 48% !important;
   }
 }
 
@@ -559,6 +566,16 @@ nav ul li a:hover::before {
 
 .imgcard .imgcard__p2:hover {
   background: #c5c5c5;
+}
+
+@media (max-width: 490px) {
+  .imgcard__mune ul li {
+    font-size: 2vw;
+  }
+  .imgcard > h2,
+  .imgcard__p1 {
+    font-size: 3vw !important;
+  }
 }
 
 /* section6 */
