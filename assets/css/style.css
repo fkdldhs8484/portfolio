@@ -387,13 +387,25 @@ nav ul li a:hover::before {
 @media (max-width: 790px) {
   .card__inner {
     width: 100%;
-    display: block;
+    /* display: block; */
   }
   .card__inner .card {
     width: 93%;
   }
   #tab-cont > .tab-img {
-    height: 69%;
+    height: 65%;
+  }
+  #tab-cont > .tab-box {
+    height: 65vw;
+  }
+}
+
+@media (max-width: 450px) {
+  #tab-cont > .tab-img {
+    height: 36%;
+  }
+  #tab-cont > .tab-box {
+    height: 65vw;
   }
 }
 
