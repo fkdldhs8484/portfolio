@@ -2442,6 +2442,8 @@ cursor: pointer; 커서를 손가락 모양으로.. */
     <script src="assets/js/common.js"></script>
     <script src="assets/js/prism.js"></script>
 
+    <script src="assets/js/canvas.js"></script>
+
     <script>
       //스크롤 이동
       document.querySelectorAll("#header nav ul li a").forEach((li) => {
@@ -2454,107 +2456,143 @@ cursor: pointer; 커서를 손가락 모양으로.. */
       });
     </script>
 
-<script>
-  document.querySelectorAll(".split").forEach(desc => {
-      let splitText = desc.innerText;
-      let splitWrap = splitText.split('').join("</span><span aria-hidden='true'>");
-          splitWrap = "<span aria-hidden='true'>" + splitWrap + "</span>";
-          desc.innerHTML = splitWrap;
-          desc.setAttribute("aria-label", splitText);
-  })
+    <script>
+      document.querySelectorAll(".split").forEach((desc) => {
+        let splitText = desc.innerText;
+        let splitWrap = splitText
+          .split("")
+          .join("</span><span aria-hidden='true'>");
+        splitWrap = "<span aria-hidden='true'>" + splitWrap + "</span>";
+        desc.innerHTML = splitWrap;
+        desc.setAttribute("aria-label", splitText);
+      });
 
-  gsap.registerPlugin(ScrollTrigger);
+      gsap.registerPlugin(ScrollTrigger);
 
-  // const lenis = new Lenis({
-  //     duration: 1.2,
-  //     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-  // })
+      // const lenis = new Lenis({
+      //     duration: 1.2,
+      //     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      // })
 
-  function raf(time) {
-      lenis.raf(time)
-      requestAnimationFrame(raf)
-  }
-
-  requestAnimationFrame(raf)
-
-  setTimeout(() => {
-      let mainTl = gsap.timeline();
-     
-      mainTl.to(".txt1 span", {duration: 0.4, y: 0, opacity:1, stagger: 0.1, ease: Circ.easeOut})
-      mainTl.to(".txt2 span", {duration: 0.4, y: 0, opacity:1, stagger: 0.1, ease: Circ.easeOut})
-      mainTl.to("#section1 .img", {duration: 0.7, opacity:1, ease: Power1.easeOut})
-      mainTl.to("#header", {duration: 0.7, top:0, ease: Power1.easeOut})
-  }, 2000);
-
-
-  gsap.to(".txt2", {
-      yPercent: -40,
-      scrollTrigger: {
-          scrub: 1,
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
       }
-  })
-  gsap.to("#section2 h2", {
-      yPercent: 200,
-      scrollTrigger: {
+
+      requestAnimationFrame(raf);
+
+      setTimeout(() => {
+        let mainTl = gsap.timeline();
+
+        mainTl.to(".txt1 span", {
+          duration: 0.4,
+          y: 0,
+          opacity: 1,
+          stagger: 0.1,
+          ease: Circ.easeOut,
+        });
+        mainTl.to(".txt2 span", {
+          duration: 0.4,
+          y: 0,
+          opacity: 1,
+          stagger: 0.1,
+          ease: Circ.easeOut,
+        });
+        mainTl.to("#section1 .img", {
+          duration: 0.7,
+          opacity: 1,
+          ease: Power1.easeOut,
+        });
+        mainTl.to("#header", { duration: 0.7, top: 0, ease: Power1.easeOut });
+      }, 2000);
+
+      gsap.to(".txt2", {
+        yPercent: -40,
+        scrollTrigger: {
           scrub: 1,
-      }
-  })
-</script>
+        },
+      });
+      gsap.to("#section2 h2", {
+        yPercent: 200,
+        scrollTrigger: {
+          scrub: 1,
+        },
+      });
+      gsap.to("#section4 h2", {
+        yPercent: 200,
+        scrollTrigger: {
+          scrub: 1,
+        },
+      });
+      gsap.to("#section6 h2", {
+        yPercent: 50,
+        scrollTrigger: {
+          scrub: 1,
+        },
+      });
+    </script>
 
-<script>
-  const images = [...document.querySelectorAll(".moveImg")];
+    <script>
+      const images = [...document.querySelectorAll(".moveImg")];
 
-  const lerp = (a, b, n) => (1 - n) * a + n * b;
-  const map = (x, a, b, c, d) => ((x - a) * (d - c)) / (b - a) + c;
+      const lerp = (a, b, n) => (1 - n) * a + n * b;
+      const map = (x, a, b, c, d) => ((x - a) * (d - c)) / (b - a) + c;
 
-  const getMousePosition = e => {
-  let posX = e.clientX;
-  let posY = e.clientY;
+      const getMousePosition = (e) => {
+        let posX = e.clientX;
+        let posY = e.clientY;
 
-  return {
-      x: posX,
-      y: posY
-  };
-  };
+        return {
+          x: posX,
+          y: posY,
+        };
+      };
 
-  let mousePos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
-  window.addEventListener("mousemove", e => (mousePos = getMousePosition(e)));
-
-  gsap.fromTo('img', {
-      scale: 1.2,
-      autoAlpha: 0,
-      ease: 'power3.inOut',
-  }, {
-      scale: 1,
-      autoAlpha: 1,
-      stagger: 0.1,
-      duration: 2.5,
-  })
-
-  images.forEach(img => {
-  let values = { x: 0, y: 0 };
-  const xStart = gsap.utils.random(16, 64);
-  const yStart = gsap.utils.random(-16, 64);
-
-  const render = () => {
-      values.x = lerp(
-      values.x,
-      map(mousePos.x, 0, window.innerWidth, -xStart, xStart),
-      0.07
+      let mousePos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+      window.addEventListener(
+        "mousemove",
+        (e) => (mousePos = getMousePosition(e))
       );
 
-      values.y = lerp(
-      values.y,
-      map(mousePos.y, 0, window.innerHeight, -yStart, yStart),
-      0.07
+      gsap.fromTo(
+        "img",
+        {
+          scale: 1.2,
+          autoAlpha: 0,
+          ease: "power3.inOut",
+        },
+        {
+          scale: 1,
+          autoAlpha: 1,
+          stagger: 0.1,
+          duration: 2.5,
+        }
       );
-      gsap.set(img, { x: values.x, y: values.y });
 
-      requestAnimationFrame(render);
-  };
-      render();
-  });
-</script>
+      images.forEach((img) => {
+        let values = { x: 0, y: 0 };
+        const xStart = gsap.utils.random(16, 64);
+        const yStart = gsap.utils.random(-16, 64);
+
+        const render = () => {
+          values.x = lerp(
+            values.x,
+            map(mousePos.x, 0, window.innerWidth, -xStart, xStart),
+            0.07
+          );
+
+          values.y = lerp(
+            values.y,
+            map(mousePos.y, 0, window.innerHeight, -yStart, yStart),
+            0.07
+          );
+          gsap.set(img, { x: values.x, y: values.y });
+
+          requestAnimationFrame(render);
+        };
+        render();
+      });
+    </script>
     <script>
       /* Parallax */
       $(window).scroll(function () {
@@ -2592,65 +2630,5 @@ cursor: pointer; 커서를 손가락 모양으로.. */
         });
       });
     </script>
-
-<script>
-  var renderer = new THREE.WebGLRenderer({
-      canvas: document.querySelector("#canvas"),
-      antialias: true
-  });
-  renderer.setSize(window.innerWidth, window.innerHeight);
-  // document.body.appendChild(renderer.domElement);
-  
-  var onRenderFcts = [];
-  var scene = new THREE.Scene();
-  var camera = new THREE.PerspectiveCamera(25, window.innerWidth / window.innerHeight, 0.01, 1000);
-  camera.position.z = 15;
-  camera.position.y = 2;
-  scene.fog = new THREE.Fog(0x000, 0, 45);;
-
-  // 조명 설정
-  var light = new THREE.AmbientLight(0x202020)
-  scene.add(light)
-  var light = new THREE.DirectionalLight('white', 5)
-  light.position.set(0.5, 0.0, 2)
-  scene.add(light)
-  var light = new THREE.DirectionalLight('white', 0.75 * 2)
-  light.position.set(-0.5, -0.5, -2)
-  scene.add(light)
-  
-  var heightMap = THREEx.Terrain.allocateHeightMap(256, 256)
-  THREEx.Terrain.simplexHeightMap(heightMap)
-  var geometry = THREEx.Terrain.heightMapToPlaneGeometry(heightMap)
-  THREEx.Terrain.heightMapToVertexColor(heightMap, geometry)
-  var material = new THREE.MeshBasicMaterial({
-      wireframe: true
-  });
-  var mesh = new THREE.Mesh(geometry, material);
-  scene.add(mesh);
-  mesh.lookAt(new THREE.Vector3(0, 1, 0));
-
-  mesh.scale.y = 3.5;
-  mesh.scale.x = 3;
-  mesh.scale.z = 0.20;
-  mesh.scale.multiplyScalar(10);
-
-  onRenderFcts.push(function (delta, now) {
-      mesh.rotation.z += 0.02 * delta;
-  })
-  onRenderFcts.push(function () {
-      renderer.render(scene, camera);
-  })
-  var lastTimeMsec = null
-  
-  requestAnimationFrame(function animate(nowMsec) {
-      requestAnimationFrame(animate);
-      lastTimeMsec = lastTimeMsec || nowMsec - 1000 / 60
-      var deltaMsec = Math.min(200, nowMsec - lastTimeMsec)
-      lastTimeMsec = nowMsec
-      onRenderFcts.forEach(function (onRenderFct) {
-          onRenderFct(deltaMsec / 1000, nowMsec / 1000)
-      })
-  })
-</script>
   </body>
 </html>
