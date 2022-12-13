@@ -1,5 +1,5 @@
 var renderer = new THREE.WebGLRenderer({
-  canvas: document.querySelector("#canvas1"),
+  canvas: document.querySelector("#canvas2"),
   antialias: true,
 });
 

@@ -73,7 +73,7 @@
 
       <section id="section2">
         <h2>work</h2>
-        <canvas id="canvas"></canvas>
+        <canvas id="canvas1"></canvas>
       </section>
       <!-- section2 -->
 
@@ -1288,7 +1288,7 @@
 
       <section id="section4">
         <h2>script</h2>
-        <canvas id="canvas"></canvas>
+        <canvas id="canvas2"></canvas>
       </section>
       <!-- section4 -->
 
@@ -2248,7 +2248,7 @@ cursor: pointer; 커서를 손가락 모양으로.. */
 
       <section id="section6">
         <h2>study</h2>
-        <canvas id="canvas"></canvas>
+        <canvas id="canvas3"></canvas>
       </section>
       <!-- section6 -->
 
@@ -2276,7 +2276,7 @@ cursor: pointer; 커서를 손가락 모양으로.. */
                 <td>2022</td>
                 <td>리액트 윹유툽 크론 코딩</td>
                 <td>프론트앤드</td>
-                <td>유튜브 API를 이용하여 사이트를 구현함</td>
+                <td class="td1">유튜브 API를 이용하여 사이트를 구현함</td>
                 <td><a class="text-btn" href="#">바로가기</a></td>
               </tr>
               <tr>
@@ -2441,9 +2441,14 @@ cursor: pointer; 커서를 손가락 모양으로.. */
 
     <!-- footer -->
 
+    <!-- canvas -->
     <script src="https://jeromeetienne.github.io/threex.terrain/examples/vendor/three.js/build/three-min.js"></script>
     <script src="https://jeromeetienne.github.io/threex.terrain/examples/vendor/three.js/examples/js/SimplexNoise.js"></script>
     <script src="https://jeromeetienne.github.io/threex.terrain/threex.terrain.js"></script>
+    <script src="assets/js/canvas.js"></script>
+    <script src="assets/js/canvas2.js"></script>
+    <script src="assets/js/canvas3.js"></script>
+    <!-- canvas -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
@@ -2457,8 +2462,6 @@ cursor: pointer; 커서를 손가락 모양으로.. */
 
     <script src="assets/js/common.js"></script>
     <script src="assets/js/prism.js"></script>
-
-    <script src="assets/js/canvas.js"></script>
 
     <script>
       //스크롤 이동
@@ -2485,10 +2488,10 @@ cursor: pointer; 커서를 손가락 모양으로.. */
 
       gsap.registerPlugin(ScrollTrigger);
 
-      // const lenis = new Lenis({
-      //     duration: 1.2,
-      //     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      // })
+      const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      });
 
       function raf(time) {
         lenis.raf(time);
@@ -2535,13 +2538,13 @@ cursor: pointer; 커서를 손가락 모양으로.. */
         },
       });
       gsap.to("#section4 h2", {
-        yPercent: 150,
+        yPercent: 100,
         scrollTrigger: {
           scrub: 1,
         },
       });
       gsap.to("#section6 h2", {
-        yPercent: 100,
+        yPercent: 50,
         scrollTrigger: {
           scrub: 1,
         },
@@ -2609,6 +2612,7 @@ cursor: pointer; 커서를 손가락 모양으로.. */
         render();
       });
     </script>
+
     <script>
       /* Parallax */
       $(window).scroll(function () {
