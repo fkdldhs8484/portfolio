@@ -219,6 +219,7 @@ nav ul li a:hover::before {
 #card__btn ul li {
   border: 1px solid #000;
   width: 176px;
+  height: 15px;
   font-size: 1vw;
   font-weight: 100;
   cursor: pointer;
@@ -403,11 +404,9 @@ nav ul li a:hover::before {
     padding: 0;
   }
 
-  #tab-cont > .tab-img {
-    height: 50vw;
-  }
+  #tab-cont > .tab-img,
   #tab-cont > .tab-box {
-    height: 45vw;
+    height: 50vw;
   }
 
   .card__desc {
@@ -662,11 +661,46 @@ tbody tr {
   }
 }
 
+@media (max-width: 790px) {
+  colgroup col:nth-child(1) {
+    width: 1% !important;
+  }
+
+  colgroup col:nth-child(2) {
+    width: 7% !important;
+  }
+
+  colgroup col:nth-child(4) {
+    width: 1% !important;
+  }
+
+  colgroup col:nth-child(5) {
+    width: 0% !important;
+  }
+
+  .text__tb tr td:nth-child(1) {
+    font-size: 1.5vw;
+  }
+
+  .text__tb tr td:nth-child(2),
+  .text__tb tr td:nth-child(4) {
+    font-size: 2vw;
+  }
+
+  .text__tb tr td a {
+    font-size: 2vw;
+  }
+
+  .text__th tr th:nth-child(3),
+  .text__tb tr td:nth-child(3) {
+    display: none;
+  }
+}
+
 @media (max-width: 450px) {
   .text__inner {
     width: 100%;
-    display: flex;
-    justify-content: center;
+    padding: 0;
   }
 
   .text__tb tr td:nth-child(3) {
@@ -712,6 +746,7 @@ tbody tr {
   justify-content: center;
   text-align: center;
   position: relative;
+  z-index: 100;
 }
 #footer__wrap > .footer__inner {
   font-size: 18vw;
