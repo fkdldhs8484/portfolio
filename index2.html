@@ -21,11 +21,11 @@
 
   <body>
     <!-- progress -->
-    <div class="progress" id ="progress">
-		<span class="progress-text"></span> 
-        <div class="loader">
-           <div class="cssload-box-loading"></div>
-        </div> 
+    <div class="progress" id="progress">
+      <span class="progress-text"></span>
+      <div class="loader">
+        <div class="cssload-box-loading"></div>
+      </div>
     </div>
     <!-- // progress -->
 
@@ -2687,7 +2687,7 @@ cursor: pointer; 커서를 손가락 모양으로.. */
     <script src="https://jeromeetienne.github.io/threex.terrain/examples/vendor/three.js/build/three-min.js"></script>
     <script src="https://jeromeetienne.github.io/threex.terrain/examples/vendor/three.js/examples/js/SimplexNoise.js"></script>
     <script src="https://jeromeetienne.github.io/threex.terrain/threex.terrain.js"></script>
-    <script src="assets/js/canvas.js"></script>
+    <script src="assets/js/canvas1.js"></script>
     <script src="assets/js/canvas2.js"></script>
     <script src="assets/js/canvas3.js"></script>
     <!-- canvas -->
@@ -2897,47 +2897,66 @@ cursor: pointer; 커서를 손가락 모양으로.. */
     </script>
 
     <script>
-      function imagesProgress(){
-    var $container = $("#progress"),
-        $progressText = $container.find(".progress-text"),
-        imgLoad = imagesLoaded("body"),	
-        imgTotal = imgLoad.images.length,	
-        imgLoaded = 0,										
-        current = 0,							
-        progressTimer = setInterval(updateProgress, 2000 / 60);	
+      function imagesProgress() {
+        var $container = $("#progress"),
+          $progressText = $container.find(".progress-text"),
+          imgLoad = imagesLoaded("body"),
+          imgTotal = imgLoad.images.length,
+          imgLoaded = 0,
+          current = 0,
+          progressTimer = setInterval(updateProgress, 2000 / 60);
 
-        imgLoad.on("progress", function(){
-            imgLoaded++;
+        imgLoad.on("progress", function () {
+          imgLoaded++;
         });
 
-    function updateProgress(){
-        var target = ( imgLoaded / imgTotal) * 100;
+        function updateProgress() {
+          var target = (imgLoaded / imgTotal) * 100;
 
-        current += ( target - current) * 0.1;
-        $progressText.text( Math.floor(current) + '%' );
+          current += (target - current) * 0.1;
+          $progressText.text(Math.floor(current) + "%");
 
-        if(current >= 100){
+          if (current >= 100) {
             clearInterval(progressTimer);
-            $container.animate({opacity: '0'},1500,'easeInOutQuint').animate({top: '-100%'},1500);
-            
-            gsap.to("#section1 .text .txt1 span", { duration: 0.4, y: 0, opacity: 1, delay: 2, stagger: 0.1,ease: "Circ.easeOut"});
-            gsap.to(".txt2 span", {duration: 0.4,y: 0,opacity: 1,stagger: 0.1, delay: 3.5, ease: "Circ.easeOut",
-        });
+            $container
+              .animate({ opacity: "0" }, 1500, "easeInOutQuint")
+              .animate({ top: "-100%" }, 1500);
+
+            gsap.to("#section1 .text .txt1 span", {
+              duration: 0.4,
+              y: 0,
+              opacity: 1,
+              delay: 2,
+              stagger: 0.1,
+              ease: "Circ.easeOut",
+            });
+            gsap.to(".txt2 span", {
+              duration: 0.4,
+              y: 0,
+              opacity: 1,
+              stagger: 0.1,
+              delay: 3.5,
+              ease: "Circ.easeOut",
+            });
             gsap.to("#section1 .img", {
-          duration: 0.7,
-          opacity: 1,
-          delay: 4,
-          ease: "Power1.easeOut",
-        });
-            gsap.to("#header", { duration: 0.7, top: 0, delay: 5, ease: "Power1.easeOut" });
-            
-        }
-        if(current > 99.9){
+              duration: 0.7,
+              opacity: 1,
+              delay: 4,
+              ease: "Power1.easeOut",
+            });
+            gsap.to("#header", {
+              duration: 0.7,
+              top: 0,
+              delay: 5,
+              ease: "Power1.easeOut",
+            });
+          }
+          if (current > 99.9) {
             current = 100;
-        };
-    };
-};
-imagesProgress();
+          }
+        }
+      }
+      imagesProgress();
     </script>
   </body>
 </html>
