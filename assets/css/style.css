@@ -219,7 +219,7 @@ nav ul li a:hover::before {
 #card__btn ul li {
   border: 1px solid #000;
   width: 176px;
-
+  font-size: 1vw;
   font-weight: 100;
   cursor: pointer;
   display: flex;
@@ -250,7 +250,7 @@ nav ul li a:hover::before {
 
 .card__box h2 {
   padding: 10px 15px;
-  font-size: 18px;
+  font-size: 1.1vw;
   font-weight: lighter;
   text-align: left;
   background: #d9d9d9;
@@ -262,7 +262,7 @@ nav ul li a:hover::before {
   align-items: center;
   padding: 10px 15px 10px 15px;
   height: 126px;
-  font-size: 18px;
+  font-size: 1.1vw;
   font-weight: lighter;
   text-align: left;
   margin-bottom: 10px;
@@ -275,7 +275,7 @@ nav ul li a:hover::before {
   text-align: center;
   font-weight: lighter;
   background: #d9d9d9;
-  font-size: 18px;
+  font-size: 1.2vw;
 }
 
 .card > .card__desc {
@@ -399,17 +399,19 @@ nav ul li a:hover::before {
 
 @media (max-width: 450px) {
   .card__inner {
-    width: 100%;
+    width: 98%;
+    padding: 0;
   }
+
   #tab-cont > .tab-img {
-    height: 45vw;
+    height: 50vw;
   }
   #tab-cont > .tab-box {
     height: 45vw;
   }
 
   .card__desc {
-    height: 48% !important;
+    height: 73vw !important;
   }
 
   #card__btn ul li {
