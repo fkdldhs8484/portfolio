@@ -102,7 +102,6 @@ nav ul li a:hover::before {
     padding-right: 40px;
   }
   .header__ham span {
-    overflow: hidden;
     display: block;
     background: #000;
     width: 30px;
