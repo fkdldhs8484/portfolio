@@ -52,6 +52,10 @@ nav ul li a:hover::before {
   transition: transform 0.5s ease;
 }
 
+.header__ham {
+  display: none;
+}
+
 @media (max-width: 705px) {
   #header h1 em {
     display: none;
@@ -60,11 +64,30 @@ nav ul li a:hover::before {
 
 @media (max-width: 450px) {
   #header {
-    width: 90%;
+    width: 100%;
   }
 
-  #header nav ul {
-    display: none;
+  #header nav {
+    position: fixed;
+    right: -100%;
+    top: 69px;
+    background: #e5e4e3;
+    width: 60%;
+    height: 100vh;
+    padding: 20px;
+    text-align: right;
+    transition: right 0.4s ease-in;
+  }
+  #header nav ul li {
+    display: block;
+    margin: 40px;
+  }
+  #header nav ul li a {
+    padding: 10px;
+    white-space: nowrap;
+  }
+  #header nav.active {
+    right: 0;
   }
 
   .header__ham {
@@ -76,6 +99,7 @@ nav ul li a:hover::before {
     height: 50px;
     display: block;
     cursor: pointer;
+    padding-right: 40px;
   }
   .header__ham span {
     display: block;
