@@ -220,6 +220,7 @@ nav ul li a:hover::before {
   position: sticky;
   background: #e5e4e3;
   padding-top: 120px;
+  overflow: hidden;
 }
 
 .card__inner {
