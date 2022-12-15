@@ -99,7 +99,7 @@ nav ul li a:hover::before {
     height: 50px;
     display: block;
     cursor: pointer;
-    /* padding-right: 40px; */
+    padding-right: 40px;
   }
   .header__ham span {
     display: block;
