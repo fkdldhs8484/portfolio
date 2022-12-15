@@ -58,6 +58,55 @@ nav ul li a:hover::before {
   }
 }
 
+@media (max-width: 450px) {
+  #header {
+    width: 90%;
+  }
+
+  #header nav ul {
+    display: none;
+  }
+
+  .header__ham {
+    /* position: absolute; */
+    right: 10px;
+    top: 10px;
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
+    display: block;
+    cursor: pointer;
+  }
+  .header__ham span {
+    display: block;
+    background: #000;
+    width: 30px;
+    height: 2px;
+    border-radius: 3px;
+    margin-left: 10px;
+    margin-top: 5px;
+    transition: 0.25s margin 0.25s, 0.25s transform;
+  }
+  .header__ham span:nth-child(1) {
+    margin-top: 17px;
+  }
+  .header__ham.active span {
+    transition: 0.25s margin, 0.25s transform 0.25s;
+  }
+  .header__ham.active span:nth-child(1) {
+    margin-top: 25px;
+    margin-bottom: -7px;
+    transform: rotate(45deg);
+  }
+  .header__ham.active span:nth-child(2) {
+    transform: rotate(45deg);
+  }
+  .header__ham.active span:nth-child(3) {
+    margin-top: -2px;
+    transform: rotate(135deg);
+  }
+}
+
 /* section1 */
 #section1 {
   height: 100vh;
@@ -185,7 +234,7 @@ nav ul li a:hover::before {
   left: 0;
   top: 0;
   z-index: 100;
-  height: 100vh;
+  height: 70vh;
   overflow: hidden;
   background: #000;
 }
@@ -481,7 +530,7 @@ nav ul li a:hover::before {
   left: 0;
   top: 0;
   z-index: 100;
-  height: 100vh;
+  height: 70vh;
   overflow: hidden;
   background: #000;
 }
@@ -641,7 +690,7 @@ nav ul li a:hover::before {
   left: 0;
   top: 0;
   z-index: 100;
-  height: 100vh;
+  height: 70vh;
   overflow: hidden;
   background: #000;
 }
