@@ -67,6 +67,7 @@ nav ul li a:hover::before {
     width: 91%;
     display: flex;
     justify-content: space-between;
+    padding: 10px 10px;
   }
 
   #header nav {
@@ -693,9 +694,6 @@ nav ul li a:hover::before {
 }
 
 @media (max-width: 490px) {
-  #canvas3 {
-    width: auto;
-  }
 }
 
 /* section7 */
