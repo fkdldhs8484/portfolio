@@ -689,7 +689,7 @@ nav ul li a:hover::before {
   left: 0;
   top: 0;
   height: 100%;
-  width: 100%;
+  width: 100vw;
   z-index: 30000;
 }
 
@@ -905,6 +905,12 @@ tbody tr {
   left: 50%;
   transform: translateX(-50%);
   bottom: 120px;
+}
+
+@media (max-width: 450px) {
+  #footer__wrap .ment {
+    font-size: 1vw;
+  }
 }
 
 /* progress */
