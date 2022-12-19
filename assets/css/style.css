@@ -583,7 +583,7 @@ nav ul li a:hover::before {
 }
 
 .imgcard__inner .tab-box {
-  height: 406px;
+  height: 100vh;
   padding-left: 13px;
   box-sizing: border-box;
   overflow: hidden;
