@@ -85,12 +85,7 @@
 
       <section id="section2">
         <h2>work</h2>
-        <iframe
-          src="https://webstoryboy.github.io/web2022/webstoryboy_three/three.js/index78.html"
-          frameborder="0"
-          allowfullscreen=""
-          width="100%"
-        ></iframe>
+        <canvas id="canvas1"></canvas>
       </section>
       <!-- section2 -->
 
@@ -112,77 +107,6 @@
                   <pre
                     class="line-numbers language-css"
                   ><code class="language-css">
-&lt;!-- contents --&gt;
-&lt;div id="customizing"&gt;
-  &lt;div class="container"&gt;
-    &lt;div class="row"&gt;
-      &lt;div id="options" class="gridly"&gt;
-        &lt;ul class="filter option-set" data-filter-group="color"&gt;
-          &lt;li&gt;
-            &lt;a href="#filter-color-any" data-filter-value="" class="selected"
-              &gt;ALL&lt;/a
-            &gt;
-          &lt;/li&gt;
-          &lt;li class="webstandard"&gt;
-            &lt;a href="#filter-color-webstandard" data-filter-value=".class"
-              &gt;CLASS&lt;/a
-            &gt;
-          &lt;/li&gt;
-          &lt;li class="webstandard"&gt;
-            &lt;a href="#filter-color-webstandard" data-filter-value=".script"
-              &gt;SCRIPT&lt;/a
-            &gt;
-          &lt;/li&gt;
-          &lt;li class="webstandard"&gt;
-            &lt;a href="#filter-color-webstandard" data-filter-value=".layout"
-              &gt;LAYOUT&lt;/a
-            &gt;
-          &lt;/li&gt;
-          &lt;li class="webstandard"&gt;
-            &lt;a href="#filter-color-webstandard" data-filter-value=".reference"
-              &gt;REFERENCE&lt;/a
-            &gt;
-          &lt;/li&gt;
-          &lt;li class="webstandard"&gt;
-            &lt;a href="#filter-color-webstandard" data-filter-value=".site"
-              &gt;SITE&lt;/a
-            &gt;
-          &lt;/li&gt;
-          &lt;li class="webstandard"&gt;
-            &lt;a href="#filter-color-webstandard" data-filter-value=".animation"
-              &gt;ANIMATION&lt;/a
-            &gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;div class="row" id="middle" style="margin-left: 16px"&gt;
-      &lt;div id="container" class="clearfix"&gt;
-        &lt;!-- box --&gt;
-        &lt;section class="color-shape class"&gt;
-          &lt;a href="class/index.html" target="_blank"&gt;
-            &lt;div class="image-wrap"&gt;
-              &lt;div class="hover-wrap"&gt;
-                &lt;span class="overlay-img-donut"&gt;CLASS&lt;/span&gt;
-                &lt;span class="overlay-text-thumb-donut"&gt;클래스&lt;/span&gt;
-                &lt;span class="overlay-text-thumb1-donut"&gt;클래스&lt;/span&gt;
-                &lt;span class="overlay-text-thumb2-donut"&gt;CLASS&lt;/span&gt;
-              &lt;/div&gt;
-              &lt;img src="assets/img/kidaha-01.svg" alt="portfolio" /&gt;
-              &lt;div class="img-text donutImg"&gt;
-                &lt;h5&gt;CLASS&lt;/h5&gt;
-                &lt;p&gt;클래스&lt;/p&gt;
-                &lt;span&gt;CLASS&lt;/span&gt;
-              &lt;/div&gt;
-            &lt;/div&gt;
-          &lt;/a&gt;
-        &lt;/section&gt;
-        &lt;!-- //box --&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
     
 </code></pre>
                 </div>
@@ -745,132 +669,21 @@ $('body').on('mousemove.parallax', function (event) {
                   <pre
                     class="line-numbers language-css"
                   ><code class="language-css">
-  //운영체제 정보 알아내기
-  let os = navigator.userAgent.toLowerCase();
-  let sw = screen.width;
-  let sh = screen.height;
-  let infor = document.getElementById("infor");
 
-  if (os.indexOf("windows") >= 0) {
-    infor.innerHTML =
-      "현재 윈도우를 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  } else if (os.indexOf("macintosh") >= 0) {
-    infor.innerHTML =
-      "현재 맥을 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  } else if (os.indexOf("iphone") >= 0) {
-    infor.innerHTML =
-      "현재 아이폰을 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  } else if (os.indexOf("android") >= 0) {
-    infor.innerHTML =
-      "현재 안드로이드 폰을 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  }
-  d
-  d 
-  d
 </code></pre>
                 </div>
                 <div class="tab-box">
                   <pre
                     class="line-numbers language-css"
                   ><code class="language-css">
-  //운영체제 정보 알아내기
-  let os = navigator.userAgent.toLowerCase();
-  let sw = screen.width;
-  let sh = screen.height;
-  let infor = document.getElementById("infor");
 
-  if (os.indexOf("windows") >= 0) {
-    infor.innerHTML =
-      "현재 윈도우를 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  } else if (os.indexOf("macintosh") >= 0) {
-    infor.innerHTML =
-      "현재 맥을 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  } else if (os.indexOf("iphone") >= 0) {
-    infor.innerHTML =
-      "현재 아이폰을 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  } else if (os.indexOf("android") >= 0) {
-    infor.innerHTML =
-      "현재 안드로이드 폰을 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  }
-  d
-  d 
-  d
 </code></pre>
                 </div>
                 <div class="tab-box">
                   <pre
                     class="line-numbers language-css"
                   ><code class="language-css">
-  //운영체제 정보 알아내기
-  let os = navigator.userAgent.toLowerCase();
-  let sw = screen.width;
-  let sh = screen.height;
-  let infor = document.getElementById("infor");
-
-  if (os.indexOf("windows") >= 0) {
-    infor.innerHTML =
-      "현재 윈도우를 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  } else if (os.indexOf("macintosh") >= 0) {
-    infor.innerHTML =
-      "현재 맥을 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  } else if (os.indexOf("iphone") >= 0) {
-    infor.innerHTML =
-      "현재 아이폰을 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  } else if (os.indexOf("android") >= 0) {
-    infor.innerHTML =
-      "현재 안드로이드 폰을 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  }
-  d
-  d 
-  d
+  
 </code></pre>
                 </div>
               </div>
@@ -911,132 +724,21 @@ $('body').on('mousemove.parallax', function (event) {
                   <pre
                     class="line-numbers language-css"
                   ><code class="language-css">
-  //운영체제 정보 알아내기
-  let os = navigator.userAgent.toLowerCase();
-  let sw = screen.width;
-  let sh = screen.height;
-  let infor = document.getElementById("infor");
-
-  if (os.indexOf("windows") >= 0) {
-    infor.innerHTML =
-      "현재 윈도우를 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  } else if (os.indexOf("macintosh") >= 0) {
-    infor.innerHTML =
-      "현재 맥을 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  } else if (os.indexOf("iphone") >= 0) {
-    infor.innerHTML =
-      "현재 아이폰을 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  } else if (os.indexOf("android") >= 0) {
-    infor.innerHTML =
-      "현재 안드로이드 폰을 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  }
-  d
-  d 
-  d
+ 
 </code></pre>
                 </div>
                 <div class="tab-box">
                   <pre
                     class="line-numbers language-css"
                   ><code class="language-css">
-  //운영체제 정보 알아내기
-  let os = navigator.userAgent.toLowerCase();
-  let sw = screen.width;
-  let sh = screen.height;
-  let infor = document.getElementById("infor");
 
-  if (os.indexOf("windows") >= 0) {
-    infor.innerHTML =
-      "현재 윈도우를 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  } else if (os.indexOf("macintosh") >= 0) {
-    infor.innerHTML =
-      "현재 맥을 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  } else if (os.indexOf("iphone") >= 0) {
-    infor.innerHTML =
-      "현재 아이폰을 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  } else if (os.indexOf("android") >= 0) {
-    infor.innerHTML =
-      "현재 안드로이드 폰을 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  }
-  d
-  d 
-  d
 </code></pre>
                 </div>
                 <div class="tab-box">
                   <pre
                     class="line-numbers language-css"
                   ><code class="language-css">
-  //운영체제 정보 알아내기
-  let os = navigator.userAgent.toLowerCase();
-  let sw = screen.width;
-  let sh = screen.height;
-  let infor = document.getElementById("infor");
-
-  if (os.indexOf("windows") >= 0) {
-    infor.innerHTML =
-      "현재 윈도우를 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  } else if (os.indexOf("macintosh") >= 0) {
-    infor.innerHTML =
-      "현재 맥을 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  } else if (os.indexOf("iphone") >= 0) {
-    infor.innerHTML =
-      "현재 아이폰을 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  } else if (os.indexOf("android") >= 0) {
-    infor.innerHTML =
-      "현재 안드로이드 폰을 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  }
-  d
-  d 
-  d
+ 
 </code></pre>
                 </div>
               </div>
@@ -1075,132 +777,21 @@ $('body').on('mousemove.parallax', function (event) {
                   <pre
                     class="line-numbers language-css"
                   ><code class="language-css">
-  //운영체제 정보 알아내기
-  let os = navigator.userAgent.toLowerCase();
-  let sw = screen.width;
-  let sh = screen.height;
-  let infor = document.getElementById("infor");
-
-  if (os.indexOf("windows") >= 0) {
-    infor.innerHTML =
-      "현재 윈도우를 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  } else if (os.indexOf("macintosh") >= 0) {
-    infor.innerHTML =
-      "현재 맥을 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  } else if (os.indexOf("iphone") >= 0) {
-    infor.innerHTML =
-      "현재 아이폰을 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  } else if (os.indexOf("android") >= 0) {
-    infor.innerHTML =
-      "현재 안드로이드 폰을 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  }
-  d
-  d 
-  d
+  
 </code></pre>
                 </div>
                 <div class="tab-box">
                   <pre
                     class="line-numbers language-css"
                   ><code class="language-css">
-  //운영체제 정보 알아내기
-  let os = navigator.userAgent.toLowerCase();
-  let sw = screen.width;
-  let sh = screen.height;
-  let infor = document.getElementById("infor");
-
-  if (os.indexOf("windows") >= 0) {
-    infor.innerHTML =
-      "현재 윈도우를 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  } else if (os.indexOf("macintosh") >= 0) {
-    infor.innerHTML =
-      "현재 맥을 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  } else if (os.indexOf("iphone") >= 0) {
-    infor.innerHTML =
-      "현재 아이폰을 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  } else if (os.indexOf("android") >= 0) {
-    infor.innerHTML =
-      "현재 안드로이드 폰을 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  }
-  d
-  d 
-  d
+ 
 </code></pre>
                 </div>
                 <div class="tab-box">
                   <pre
                     class="line-numbers language-css"
                   ><code class="language-css">
-  //운영체제 정보 알아내기
-  let os = navigator.userAgent.toLowerCase();
-  let sw = screen.width;
-  let sh = screen.height;
-  let infor = document.getElementById("infor");
-
-  if (os.indexOf("windows") >= 0) {
-    infor.innerHTML =
-      "현재 윈도우를 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  } else if (os.indexOf("macintosh") >= 0) {
-    infor.innerHTML =
-      "현재 맥을 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  } else if (os.indexOf("iphone") >= 0) {
-    infor.innerHTML =
-      "현재 아이폰을 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  } else if (os.indexOf("android") >= 0) {
-    infor.innerHTML =
-      "현재 안드로이드 폰을 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  }
-  d
-  d 
-  d
+  
 </code></pre>
                 </div>
               </div>
@@ -1238,132 +829,21 @@ $('body').on('mousemove.parallax', function (event) {
                   <pre
                     class="line-numbers language-css"
                   ><code class="language-css">
-  //운영체제 정보 알아내기
-  let os = navigator.userAgent.toLowerCase();
-  let sw = screen.width;
-  let sh = screen.height;
-  let infor = document.getElementById("infor");
-
-  if (os.indexOf("windows") >= 0) {
-    infor.innerHTML =
-      "현재 윈도우를 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  } else if (os.indexOf("macintosh") >= 0) {
-    infor.innerHTML =
-      "현재 맥을 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  } else if (os.indexOf("iphone") >= 0) {
-    infor.innerHTML =
-      "현재 아이폰을 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  } else if (os.indexOf("android") >= 0) {
-    infor.innerHTML =
-      "현재 안드로이드 폰을 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  }
-  d
-  d 
-  d
+ 
 </code></pre>
                 </div>
                 <div class="tab-box">
                   <pre
                     class="line-numbers language-css"
                   ><code class="language-css">
-  //운영체제 정보 알아내기
-  let os = navigator.userAgent.toLowerCase();
-  let sw = screen.width;
-  let sh = screen.height;
-  let infor = document.getElementById("infor");
 
-  if (os.indexOf("windows") >= 0) {
-    infor.innerHTML =
-      "현재 윈도우를 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  } else if (os.indexOf("macintosh") >= 0) {
-    infor.innerHTML =
-      "현재 맥을 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  } else if (os.indexOf("iphone") >= 0) {
-    infor.innerHTML =
-      "현재 아이폰을 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  } else if (os.indexOf("android") >= 0) {
-    infor.innerHTML =
-      "현재 안드로이드 폰을 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  }
-  d
-  d 
-  d
 </code></pre>
                 </div>
                 <div class="tab-box">
                   <pre
                     class="line-numbers language-css"
                   ><code class="language-css">
-  //운영체제 정보 알아내기
-  let os = navigator.userAgent.toLowerCase();
-  let sw = screen.width;
-  let sh = screen.height;
-  let infor = document.getElementById("infor");
-
-  if (os.indexOf("windows") >= 0) {
-    infor.innerHTML =
-      "현재 윈도우를 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  } else if (os.indexOf("macintosh") >= 0) {
-    infor.innerHTML =
-      "현재 맥을 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  } else if (os.indexOf("iphone") >= 0) {
-    infor.innerHTML =
-      "현재 아이폰을 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  } else if (os.indexOf("android") >= 0) {
-    infor.innerHTML =
-      "현재 안드로이드 폰을 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  }
-  d
-  d 
-  d
+  
 </code></pre>
                 </div>
               </div>
@@ -1402,132 +882,21 @@ $('body').on('mousemove.parallax', function (event) {
                   <pre
                     class="line-numbers language-css"
                   ><code class="language-css">
-  //운영체제 정보 알아내기
-  let os = navigator.userAgent.toLowerCase();
-  let sw = screen.width;
-  let sh = screen.height;
-  let infor = document.getElementById("infor");
-
-  if (os.indexOf("windows") >= 0) {
-    infor.innerHTML =
-      "현재 윈도우를 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  } else if (os.indexOf("macintosh") >= 0) {
-    infor.innerHTML =
-      "현재 맥을 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  } else if (os.indexOf("iphone") >= 0) {
-    infor.innerHTML =
-      "현재 아이폰을 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  } else if (os.indexOf("android") >= 0) {
-    infor.innerHTML =
-      "현재 안드로이드 폰을 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  }
-  d
-  d 
-  d
+  
 </code></pre>
                 </div>
                 <div class="tab-box">
                   <pre
                     class="line-numbers language-css"
                   ><code class="language-css">
-  //운영체제 정보 알아내기
-  let os = navigator.userAgent.toLowerCase();
-  let sw = screen.width;
-  let sh = screen.height;
-  let infor = document.getElementById("infor");
 
-  if (os.indexOf("windows") >= 0) {
-    infor.innerHTML =
-      "현재 윈도우를 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  } else if (os.indexOf("macintosh") >= 0) {
-    infor.innerHTML =
-      "현재 맥을 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  } else if (os.indexOf("iphone") >= 0) {
-    infor.innerHTML =
-      "현재 아이폰을 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  } else if (os.indexOf("android") >= 0) {
-    infor.innerHTML =
-      "현재 안드로이드 폰을 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  }
-  d
-  d 
-  d
 </code></pre>
                 </div>
                 <div class="tab-box">
                   <pre
                     class="line-numbers language-css"
                   ><code class="language-css">
-  //운영체제 정보 알아내기
-  let os = navigator.userAgent.toLowerCase();
-  let sw = screen.width;
-  let sh = screen.height;
-  let infor = document.getElementById("infor");
-
-  if (os.indexOf("windows") >= 0) {
-    infor.innerHTML =
-      "현재 윈도우를 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  } else if (os.indexOf("macintosh") >= 0) {
-    infor.innerHTML =
-      "현재 맥을 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  } else if (os.indexOf("iphone") >= 0) {
-    infor.innerHTML =
-      "현재 아이폰을 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  } else if (os.indexOf("android") >= 0) {
-    infor.innerHTML =
-      "현재 안드로이드 폰을 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  }
-  d
-  d 
-  d
+ 
 </code></pre>
                 </div>
               </div>
