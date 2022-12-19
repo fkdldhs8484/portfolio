@@ -275,7 +275,7 @@
           이미지 표현 3가지 img-&gt;의미,로고-&gt;의미x backgvad, 이미지
           --&gt;
           &lt;figure class="card__header"&gt;
-              &lt;img src="img/card_bg01_01.jpg" <i>alt="웹표준 사이트 만들기"</i>&gt;
+              &lt;img src="img/card_bg01_01.jpg" alt="웹표준 사이트 만들기"&gt;
           &lt;/figure&gt;
           &lt;div class="card__body"&gt;
               &lt;h3 class="tit"&gt;말티즈가 한심하게 처다볼때&lt;/h3&gt;
@@ -365,7 +365,7 @@ var swiper = new Swiper(".mySwiper", {
 
 const btnStop = document.querySelector(".swiper-button-stop");  // 스와이퍼 버튼
 const btnStart = document.querySelector(".swiper-button-play");
-const btnHam = document.querySelector(".header__ham");          // 햄버거 버튼
+
 const btnMenu = document.querySelector(".header__menu");        // 메뉴
 const btnMenuList = btnMenu.querySelectorAll("ul li a");        // 메뉴리스트
 
@@ -388,12 +388,6 @@ btnMenuList.forEach((list) => {
         btnMenu.classList.remove("active");
         btnHam.classList.remove("active");
     });
-});
-
-btnHam.addEventListener("click", () => {
-    btnHam.classList.toggle("active");
-    btnMenu.classList.toggle("active");
-    document.body.classList.toggle("fixed");
 });
 
 window.addEventListener("resize", () => {
@@ -473,14 +467,55 @@ document.querySelectorAll("a").forEach(li => {
                 <div class="tab-box">
                   <pre
                     class="line-numbers language-css"
-                  ><code class="language-css">
+                  ><code class="language-css">const btnHam = document.querySelector(".header__ham");
 
+btnHam.addEventListener("click", () => {
+    btnHam.classList.toggle("active");
+    btnMenu.classList.toggle("active");
+    document.body.classList.toggle("fixed");
+});
 </code></pre>
                 </div>
                 <div class="tab-box">
                   <pre
                     class="line-numbers language-css"
-                  ><code class="language-css">
+                  ><code class="language-css">/* media */
+@media (max-width: 1300px) {
+  .header__menu {
+    position: fixed;
+    right: -100%;
+    top: 69px;
+    background: #fff;
+    width: 60%;
+    height: 100vh;
+    padding: 20px;
+    text-align: right;
+    transition: right 0.4s ease-in;
+  }
+  .header__menu ul li {
+    display: block;
+    margin: 20px;
+  }
+  .header__menu ul li a {
+    padding: 10px;
+    white-space: nowrap;
+  }
+  .header__menu.active {
+    right: 0;
+  }
+  .header__member {
+    margin-right: 50px;
+  }
+  .header__ham {
+    display: block;
+  }
+  .header__logo {
+    width: 50%;
+  }
+  .header__member {
+    width: 50%;
+  }
+}
  
 </code></pre>
                 </div>
@@ -519,22 +554,64 @@ document.querySelectorAll("a").forEach(li => {
                 <div class="tab-box">
                   <pre
                     class="line-numbers language-css"
-                  ><code class="language-css">
-  
+                  ><code class="language-css">&lt;template&gt;
+  &lt;div&gt;
+    &lt;HeaderCont /&gt;
+    &lt;section className="cont__main"&gt;
+      &lt;div className="container"&gt;
+        &lt;div className="main__inner"&gt;
+          &lt;div v-for="title in titles" v-bind:key="title.text"&gt;
+            {{ title.text }}
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;FooterCont /&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
 </code></pre>
                 </div>
                 <div class="tab-box">
                   <pre
                     class="line-numbers language-css"
-                  ><code class="language-css">
- 
+                  ><code class="language-css">&lt;style lang="scss" scoped&gt;
+.main__inner {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 100vh;
+  color: var(--black);
+  &gt; div {
+    font-size: 9.4vw;
+    line-height: 0.9;
+    text-transform: uppercase;
+  }
+}
+&lt;/style&gt;
 </code></pre>
                 </div>
                 <div class="tab-box">
                   <pre
                     class="line-numbers language-css"
-                  ><code class="language-css">
-  
+                  ><code class="language-css">import HeaderCont from "@/components/HeaderCont.vue";
+import FooterCont from "@/components/FooterCont.vue";
+export default {
+  components: {
+    HeaderCont,
+    FooterCont,
+  },
+  data: function () {
+    return {
+      titles: [
+        { text: "we provide" },
+        { text: "visual coding" },
+        { text: "solutions" },
+        { text: "for you API" },
+      ],
+    };
+  },
+};
 </code></pre>
                 </div>
               </div>
@@ -561,8 +638,8 @@ document.querySelectorAll("a").forEach(li => {
               <ul class="list">
                 <li class="active">이미지</li>
                 <li>코드보기</li>
-                <li>자바스크립트</li>
-                <li>HTML/CSS</li>
+                <li>CSS</li>
+                <li>APP.js</li>
               </ul>
             </div>
             <div class="card__desc">
@@ -571,22 +648,83 @@ document.querySelectorAll("a").forEach(li => {
                 <div class="tab-box">
                   <pre
                     class="line-numbers language-css"
-                  ><code class="language-css">
- 
-</code></pre>
-                </div>
-                <div class="tab-box">
-                  <pre
-                    class="line-numbers language-css"
-                  ><code class="language-css">
+                  ><code class="language-css">import React from "react";
 
+const mainInfo = [
+  { text: "we provide" },
+  { text: "visual coding" },
+  { text: "solutions" },
+  { text: "for you API" },
+];
+
+const MainText = ({ text }) =&gt; {
+  return &lt;div&gt;{text}&lt;/div&gt;;
+};
+
+const MainCont = () =&gt; {
+  return (
+    &lt;section className="cont__main"&gt;
+      &lt;div className="container"&gt;
+        &lt;div className="main__inner"&gt;
+          {mainInfo.map((text, idx) =&gt; (
+            &lt;MainText key={idx} text={text.text} /&gt;
+          ))}
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+  );
+};
+
+export default MainCont;
 </code></pre>
                 </div>
                 <div class="tab-box">
                   <pre
                     class="line-numbers language-css"
-                  ><code class="language-css">
-  
+                  ><code class="language-css">.main__inner {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 100vh;
+  color: var(--white);
+
+  > div {
+    font-size: 9.4vw;
+    line-height: 0.9;
+    text-transform: uppercase;
+  }
+}
+</code></pre>
+                </div>
+                <div class="tab-box">
+                  <pre
+                    class="line-numbers language-css"
+                  ><code class="language-css">import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Main from "./components/pages/Main";
+import Youtube from "./components/pages/Youtube";
+import Movie from "./components/pages/Movie";
+import Unsplash from "./components/pages/Unsplash";
+import About from "./components/pages/About";
+import Reference from "./components/pages/Reference";
+
+const App = () =&gt; {
+  return (
+    &lt;BrowserRouter&gt;
+      &lt;Routes&gt;
+        &lt;Route path="/" element={&lt;Main /&gt;} /&gt;
+        &lt;Route path="/about" element={&lt;About /&gt;} /&gt;
+        &lt;Route path="/reference" element={&lt;Reference /&gt;} /&gt;
+        &lt;Route path="/youtube" element={&lt;Youtube /&gt;} /&gt;
+        &lt;Route path="/movie" element={&lt;Movie /&gt;} /&gt;
+        &lt;Route path="/unsplash" element={&lt;Unsplash /&gt;} /&gt;
+      &lt;/Routes&gt;
+    &lt;/BrowserRouter&gt;
+  );
+};
+
+export default App;
 </code></pre>
                 </div>
               </div>
@@ -624,8 +762,41 @@ document.querySelectorAll("a").forEach(li => {
                 <div class="tab-box">
                   <pre
                     class="line-numbers language-css"
-                  ><code class="language-css">
+                  ><code class="language-css">import React, { useEffect, useState } from 'react'
+
+  import { fetchAPI } from '../utils/fetchAPI'
+  import { Category, Videos, Loader } from './'
   
+  const MainConts = () =&gt; {
+    const [selectCategory, setSelectCategory] = useState('dog')
+    const [videos, setVideos] = useState(null)
+  
+    // &type=videos --&gt; 만약 사진이 안나오는게 있다면  옆에 붙이기
+    useEffect(() =&gt; {
+      fetchAPI(`search?part=snippet&q=${selectCategory}&type=video`).then(
+        (data) =&gt; setVideos(data.items)
+      )
+    }, [selectCategory])
+  
+    return (
+      &lt;main id="main"&gt;
+        &lt;aside id="aside"&gt;
+          &lt;Category
+            selectCategory={selectCategory}
+            setSelectCategory={setSelectCategory}
+          /&gt;
+        &lt;/aside&gt;
+        &lt;section id="contents"&gt;
+          &lt;h2&gt;
+            &lt;em&gt;{selectCategory}&lt;/em&gt; 유튜버
+          &lt;/h2&gt;
+          &lt;Videos videos={videos} /&gt;
+        &lt;/section&gt;
+      &lt;/main&gt;
+    )
+  }
+  
+  export default MainConts
 </code></pre>
                 </div>
                 <div class="tab-box">

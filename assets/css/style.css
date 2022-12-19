@@ -264,6 +264,10 @@ nav ul li a:hover::before {
   position: relative;
 }
 
+#card__btn ul li:nth-child(2) {
+  background-image: url();
+}
+
 .c1,
 .c3,
 .c5,
@@ -556,6 +560,11 @@ nav ul li a:hover::before {
 .imgcard.show {
   opacity: 1;
   transform: translateY(-100px);
+}
+
+.imgcard iframe {
+  width: 100%;
+  height: 100vh;
 }
 
 .imgcard-tab-cont > div {
