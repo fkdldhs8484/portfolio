@@ -902,9 +902,21 @@ tbody tr {
   bottom: 120px;
 }
 
+@media (max-width: 790px) {
+  .footer__img {
+    width: 16vw;
+    height: 16vw;
+  }
+}
+
 @media (max-width: 450px) {
   #footer__wrap .ment {
     font-size: 1vw;
+  }
+
+  .footer__img {
+    width: 30vw;
+    height: 30vw;
   }
 }
 

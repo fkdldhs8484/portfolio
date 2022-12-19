@@ -106,8 +106,26 @@
                 <div class="tab-box">
                   <pre
                     class="line-numbers language-css"
-                  ><code class="language-css">
-    
+                  ><code class="language-css">&lt;!-- box --&gt;
+&lt;section class="color-shape class"&gt;
+  &lt;a href="class/index.html" target="_blank"&gt;
+    &lt;div class="image-wrap"&gt;
+      &lt;div class="hover-wrap"&gt;
+        &lt;span class="overlay-img-donut"&gt;CLASS&lt;/span&gt;
+        &lt;span class="overlay-text-thumb-donut"&gt;클래스&lt;/span&gt;
+        &lt;span class="overlay-text-thumb1-donut"&gt;클래스&lt;/span&gt;
+        &lt;span class="overlay-text-thumb2-donut"&gt;CLASS&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;img src="assets/img/kidaha-01.svg" alt="portfolio" /&gt;
+      &lt;div class="img-text donutImg"&gt;
+        &lt;h5&gt;CLASS&lt;/h5&gt;
+        &lt;p&gt;클래스&lt;/p&gt;
+        &lt;span&gt;CLASS&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/section&gt;
+&lt;!-- //box --&gt;                        
 </code></pre>
                 </div>
                 <div class="tab-box">
@@ -160,101 +178,7 @@
                   <pre
                     class="line-numbers language-css"
                   ><code class="language-css">
-  &lt;script&gt;
-  //운영체제 정보 알아내기
-  let os = navigator.userAgent.toLowerCase();
-  let sw = screen.width;
-  let sh = screen.height;
-  let infor = document.getElementById("infor");
-
-  if (os.indexOf("windows") &gt;= 0) {
-    infor.innerHTML =
-      "현재 윈도우를 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  } else if (os.indexOf("macintosh") &gt;= 0) {
-    infor.innerHTML =
-      "현재 맥을 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  } else if (os.indexOf("iphone") &gt;= 0) {
-    infor.innerHTML =
-      "현재 아이폰을 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  } else if (os.indexOf("android") &gt;= 0) {
-    infor.innerHTML =
-      "현재 안드로이드 폰을 사용하고 있으며, 화면 크기는 " +
-      sw +
-      "x" +
-      sh +
-      " 입니다.";
-  }
-
-  //시간 표현
-  let clock = document.getElementById("clock");
-
-  setInterval(function () {
-    clock.innerHTML = new Date().toLocaleTimeString();
-  }, 1000);
-
-  $(function () {
-    var $container = $("#container"),
-      filters = {};
-
-    $container.isotope({
-      itemSelector: ".color-shape",
-      masonry: {
-        columnWidth: 57,
-      },
-    });
-
-    // filter buttons
-    $(".filter a").click(function () {
-      var $this = $(this);
-      // don't proceed if already selected
-      if ($this.hasClass("selected")) {
-        return;
-      }
-
-      var $optionSet = $this.parents(".option-set");
-      // change selected class
-      $optionSet.find(".selected").removeClass("selected");
-      $this.addClass("selected");
-
-      // store filter value in object
-      // i.e. filters.color = 'red'
-      var group = $optionSet.attr("data-filter-group");
-      filters[group] = $this.attr("data-filter-value");
-      // convert object into array
-      var isoFilters = [];
-      for (var prop in filters) {
-        isoFilters.push(filters[prop]);
-      }
-      var selector = isoFilters.join("");
-      $container.isotope({
-        filter: selector,
-      });
-
-      return false;
-    });
-
-    $(".tit_btn").on("click", function (e) {
-      e.preventDefault();
-      $(".nav_container").toggleClass("on");
-    });
-
-    $(".click").click(function () {
-      $(".view").fadeToggle();
-    });
-  });
-&lt;/script&gt; 
+ 
 </code></pre>
                 </div>
               </div>
@@ -290,347 +214,19 @@
                 <div class="tab-box">
                   <pre
                     class="line-numbers language-css"
-                  ><code class="language-css">&lt;main&gt;
-  &lt;div class="link"&gt;
-      &lt;ul&gt;
-          &lt;li&gt;&lt;a href="https://fkdldhs8484.tistory.com/" target="_blank"&gt;t&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href="https://github.com/fkdldhs8484/coding2" target="_blank"&gt;g&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href="https://github1s.com/fkdldhs8484/coding2" target="_blank"&gt;v&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-  &lt;/div&gt;
-  &lt;div class="dog"&gt;
-      &lt;div class="wrap"&gt;
-          &lt;div class="body"&gt;
-              &lt;div class="leg l"&gt;
-                  &lt;div class="paw"&gt;&lt;/div&gt;
-              &lt;/div&gt;
-              &lt;div class="leg r"&gt;
-                  &lt;div class="paw"&gt;&lt;/div&gt;
-              &lt;/div&gt;
-              &lt;div class="spots"&gt;&lt;/div&gt;
-              &lt;div class="head"&gt;
-                  &lt;div class="snout"&gt;
-                      &lt;div class="nose"&gt;&lt;/div&gt;
-                  &lt;/div&gt;
-                  &lt;div class="eyes"&gt;&lt;/div&gt;
-                  &lt;div class="ear"&gt;&lt;/div&gt;
-                  &lt;div class="ear right"&gt;&lt;/div&gt;
-                  &lt;div class="inner"&gt;
-                      &lt;div class="spot"&gt;&lt;/div&gt;
-                  &lt;/div&gt;
-                  &lt;div class="eyes"&gt;&lt;/div&gt;
-                  &lt;div class="ear"&gt;&lt;/div&gt;
-                  &lt;div class="ear right"&gt;&lt;/div&gt;
-                  &lt;div class="inner"&gt;
-                      &lt;div class="spot"&gt;&lt;/div&gt;
-                  &lt;/div&gt;
-              &lt;/div&gt;
-          &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display:none"&gt;
-          &lt;defs&gt;
-              &lt;filter id="squiggly-0"&gt;
-                  &lt;feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="0" /&gt;
-                  &lt;feDisplacementMap id="displacement" in="SourceGraphic" in2="noise" scale="2" /&gt;
-              &lt;/filter&gt;
-              &lt;filter id="squiggly-1"&gt;
-                  &lt;feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="1" /&gt;
-                  &lt;feDisplacementMap in="SourceGraphic" in2="noise" scale="3" /&gt;
-              &lt;/filter&gt;
-              &lt;filter id="squiggly-2"&gt;
-                  &lt;feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="2" /&gt;
-                  &lt;feDisplacementMap in="SourceGraphic" in2="noise" scale="2" /&gt;
-              &lt;/filter&gt;
-              &lt;filter id="squiggly-3"&gt;
-                  &lt;feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="3" /&gt;
-                  &lt;feDisplacementMap in="SourceGraphic" in2="noise" scale="3" /&gt;
-              &lt;/filter&gt;
-              &lt;filter id="squiggly-4"&gt;
-                  &lt;feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="4" /&gt;
-                  &lt;feDisplacementMap in="SourceGraphic" in2="noise" scale="1" /&gt;
-              &lt;/filter&gt;
-          &lt;/defs&gt;
-      &lt;/svg&gt;
-  &lt;/div&gt;
-  &lt;!-- //dog --&gt;
-  &lt;h1&gt;javascript&lt;/h1&gt;
-  &lt;nav&gt;
-      &lt;ul&gt;
-          &lt;li&gt;&lt;a href="javascript01.html"&gt;데이터 저장하기&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href="javascript02.html"&gt;데이터 불러오기&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href="javascript03.html"&gt;데이터 실행하기&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href="javascript04.html"&gt;데이터 제어하기&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-      &lt;ul&gt;
-          &lt;li&gt;&lt;a href="javascript05.html"&gt;문자열 객체&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href="javascript06.html"&gt;배열 객체&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href="javascript07.html"&gt;수학 객체&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href="javascript08.html"&gt;숫자 객체&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href="javascript09.html"&gt;브라우저 객체&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href="javascript10.html"&gt;요소 객체&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href="javascript11.html"&gt;이벤트 객체&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-  &lt;/nav&gt;
-&lt;/main&gt;
+                  ><code class="language-css">
 </code></pre>
                 </div>
                 <div class="tab-box">
                   <pre
                     class="line-numbers language-css"
-                  ><code class="language-css"> * {
-  margin: 0;
-  padding: 0;
-}
-
-main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 100vh;
-    font-family: "GmarketSans";
-    text-align: center;
-    padding: 2vw;
-    border: 8px solid #936da1;
-    box-sizing: border-box;
-    border-radius: 20px;
-    position: relative;
-}
-
-main::before {
-    content: "";
-    border: 8px solid #936da1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: calc(100% - 16px);
-    height: calc(100vh - 32px);
-    border-radius: 12px;
-    z-index: -1;
-}
-
-h1 {
-    font-size: 8vw;
-    color: #936da1;
-    margin-bottom: 4vw;
-    text-transform: capitalize;
-    /* text-transform: capitalize; 영어 앞글자 대문자로 */
-}
-
-nav ul li {
-    display: inline;
-    list-style: none;
-}
-
-nav ul li a {
-    text-decoration: none;
-    border: 1px dashed #936da1;
-    color: #936da1;
-    padding: 10px 24px;
-    display: inline-block;
-    margin: 6px 3px;
-    border-radius: 50px;
-    font-size: 18px;
-    transition: all 0.3s;
-}
-
-nav ul li a:hover {
-    background-color: #936da1;
-    color: aliceblue;
-}
-@media (max-height:700px) {
-  main::before {
-      display: none;
-  }
-}
-
-@media (max-width: 800px) {
-  main {
-      min-height: 700px;
-  }
-
-  h1 {
-      font-size: 40px;
-  }
-
-  nav ul:nth-child(2) {
-      display: none;
-  }
-}
-
-.link {
-  position: absolute;
-  right: 30px;
-  top: 30px;
-  z-index: 10000;
-}
-.link li {
-  list-style: none;
-  display: inline;
-}
-.link li a {
-  font-family: "GmarketSans";
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 30px;
-  border: 1px solid #936da1;
-  display: inline-block;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 14px;
-  padding-top: 1px;
-  transition: all 0.3s;
-  background: #936da1;
-  color: #fff;
-}
-.link li a:hover {
-  background: #fff;
-  color: #936da1;
-}
+                  ><code class="language-css">
 </code></pre>
                 </div>
                 <div class="tab-box">
                   <pre
                     class="line-numbers language-css"
-                  ><code class="language-css">var $eyes = $('.eyes'),
-  $snout = $('.snout'),
-  $spot = $('.spot'),
-  $nose = $('.nose'),
-  $ear = $('.ear'),
-  $rightear = $('.right'),
-  $leftleg = $('.l'),
-  $rightleg = $('.r'),
-  $leftpaw = $('.l .paw'),
-  $rightpaw = $('.r .paw'),
-  $container = $('.wrap'),
-  $outer = $('body'),
-  container_w = $container.width(),
-  container_h = $container.height();
-
-$('body').on('mousemove.parallax', function (event) {
-  var pos_x = event.pageX,
-      pos_y = event.pageY,
-      left = 0,
-      bottom = 0,
-      top = 0;
-
-  left = container_w / 0.5 - pos_x;
-  top = container_h / 2 - pos_y;
-  bottom = container_h / 0.25 - (pos_y * 2.5);
-
-
-  TweenMax.to(
-      $snout,
-      1,
-      {
-          css: {
-              transform: 'translateX(' + left / -32 + 'px) translateY(' + top / -26 + 'px) translateZ(1px)'
-          },
-          ease: Expo.easeOut,
-          overwrite: 'all'
-      });
-
-  TweenMax.to(
-      $spot,
-      1,
-      {
-          css: {
-              transform: 'translateX(' + left / -32 + 'px) translateY(' + top / -56 + 'px) translateZ(1px)'
-          },
-          ease: Expo.easeOut,
-          overwrite: 'all'
-      });
-
-  TweenMax.to(
-      $eyes,
-      1,
-      {
-          css: {
-              transform: 'translateX(' + left / -40 + 'px) translateY(' + top / -40 + 'px) translateZ(0px)'
-          },
-          ease: Expo.easeOut,
-          overwrite: 'all'
-      });
-
-  TweenMax.to(
-      $nose,
-      1,
-      {
-          css: {
-              transform: 'translateX(' + left / -40 + 'px) translateY(' + top / -50 + 'px) translateZ(0px)'
-          },
-          ease: Expo.easeOut,
-          overwrite: 'all'
-      });
-
-  TweenMax.to(
-      $ear,
-      1,
-      {
-          css: {
-              transform: 'rotate(' + bottom / -60 + 'deg) translatex(' + left / 60 + 'px) translateY(' + top / 40 + 'px) translateZ(-2px)'
-          },
-          ease: Expo.easeOut,
-          overwrite: 'all'
-      });
-
-  TweenMax.to(
-      $rightear,
-      1,
-      {
-          css: {
-              transform: 'rotate(' + bottom / 60 + 'deg) translatex(' + left / 60 + 'px) translateY(' + top / 40 + 'px) translateZ(-2px)'
-          },
-          ease: Expo.easeOut,
-          overwrite: 'all'
-      });
-
-  TweenMax.to(
-      $leftleg,
-      1,
-      {
-          css: {
-              transform: 'rotate(' + left / 30 + 'deg) translateY(' + top / -100 + 'px) translateZ(-2px)',
-          },
-          ease: Expo.easeOut,
-          overwrite: 'all'
-      });
-
-  TweenMax.to(
-      $rightleg,
-      1,
-      {
-          css: {
-              transform: 'rotate(' + left / 30 + 'deg) translateY(' + top / -100 + 'px) translateZ(-2px)',
-          },
-          ease: Expo.easeOut,
-          overwrite: 'all'
-      });
-  TweenMax.to(
-      $leftpaw,
-      1,
-      {
-          css: {
-              transform: 'rotate(' + left / -30 + 'deg) translateY(' + bottom / -120 + 'px) translatex(' + left / -50 + 'px) translateZ(2px)',
-          },
-          ease: Expo.easeOut,
-          overwrite: 'all'
-      });
-  TweenMax.to(
-      $rightpaw,
-      1,
-      {
-          css: {
-              transform: 'rotate(' + left / -30 + 'deg) translateY(' + bottom / -120 + 'px) translatex(' + left / -50 + 'px) translateZ(2px)',
-          },
-          ease: Expo.easeOut,
-          overwrite: 'all'
-      });
-
-
-});
+                  ><code class="language-css">
 </code></pre>
                 </div>
               </div>
@@ -668,22 +264,169 @@ $('body').on('mousemove.parallax', function (event) {
                 <div class="tab-box">
                   <pre
                     class="line-numbers language-css"
-                  ><code class="language-css">
-
+                  ><code class="language-css">&lt;section id="cardType" class="card__wrap NexonLv1Gothic section"&gt;
+  &lt;span class="blind"&gt;카드 유형 01&lt;/span&gt;
+  &lt;h2&gt;말티즈 강의&lt;/h2&gt;
+  &lt;p&gt;우리집 말티즈의 귀여움을 알아보자.&lt;/p&gt;
+  &lt;div class="card__inner container"&gt;
+      &lt;article class="card"&gt;
+          &lt;!-- alt 웹 표준성  화살표 모양은 백터 방식이나 이미지파일로 넣을수 있다.
+          css 벡터/비트맵 방식 정리 하기.비트맵 방식-&gt; png투명도 처리,jpg 화려한 효과, jif 애니메이션 효과 가능 256색깔만 지원해서 단순한 것만 사용가능
+          이미지 표현 3가지 img-&gt;의미,로고-&gt;의미x backgvad, 이미지
+          --&gt;
+          &lt;figure class="card__header"&gt;
+              &lt;img src="img/card_bg01_01.jpg" <i>alt="웹표준 사이트 만들기"</i>&gt;
+          &lt;/figure&gt;
+          &lt;div class="card__body"&gt;
+              &lt;h3 class="tit"&gt;말티즈가 한심하게 처다볼때&lt;/h3&gt;
+              &lt;p class="decs"&gt;말티즈는 가끔 아니 자주 주인을 한심하게 처다볼때가 많습니다.성격이 치와와급으로 더럽습니다.자기 마음에 안들면 짖습니다. 간식주면 다
+                  따라갑니다.
+              &lt;/p&gt;
+              &lt;a class="btn" href="/"&gt;
+                  더 자세히 보기
+                  &lt;span aria-hidden="true"&gt;
+                      &lt;svg width="65" height="8" viewBox="0 0 65 8" fill="none"
+                          xmlns="http://www.w3.org/2000/svg"&gt;
+                          &lt;path
+                              d="M64.3536 4.35355C64.5488 4.15829 64.5488 3.84171 64.3536 3.64645L61.1716 0.464466C60.9763 0.269203 60.6597 0.269203 60.4645 0.464466C60.2692 0.659728 60.2692 0.97631 60.4645 1.17157L63.2929 4L60.4645 6.82843C60.2692 7.02369 60.2692 7.34027 60.4645 7.53553C60.6597 7.7308 60.9763 7.7308 61.1716 7.53553L64.3536 4.35355ZM0 4.5H64V3.5H0L0 4.5Z"
+                              fill="black" /&gt;
+                      &lt;/svg&gt;
+                  &lt;/span&gt;
+              &lt;/a&gt;
+          &lt;/div&gt;
+      &lt;/article&gt;
+      &lt;article class="card "&gt;
+          &lt;figure class="card__header"&gt;
+              &lt;img src="img/card_bg01_02.jpg" alt="웹표준 사이트 만들기"&gt;
+          &lt;/figure&gt;
+          &lt;div class="card__body "&gt;
+              &lt;h3 class="tit"&gt;말티즈가 산책할때&lt;/h3&gt;
+              &lt;p class="decs"&gt;말티즈는 산책을 아주 좋아합니다. 간식을 들고 가도 산책을 더 좋아해서 간식을 처다도 안봅니다.주인이 멈춰도 알아서 자기가 갈길을 갑니다.
+              &lt;/p&gt;
+              &lt;a class="btn" href="/"&gt;
+                  더 자세히 보기
+                  &lt;span aria-hidden="true"&gt;
+                      &lt;svg width="65" height="8" viewBox="0 0 65 8" fill="none"
+                          xmlns="http://www.w3.org/2000/svg"&gt;
+                          &lt;path
+                              d="M64.3536 4.35355C64.5488 4.15829 64.5488 3.84171 64.3536 3.64645L61.1716 0.464466C60.9763 0.269203 60.6597 0.269203 60.4645 0.464466C60.2692 0.659728 60.2692 0.97631 60.4645 1.17157L63.2929 4L60.4645 6.82843C60.2692 7.02369 60.2692 7.34027 60.4645 7.53553C60.6597 7.7308 60.9763 7.7308 61.1716 7.53553L64.3536 4.35355ZM0 4.5H64V3.5H0L0 4.5Z"
+                              fill="black" /&gt;
+                      &lt;/svg&gt;
+                  &lt;/span&gt;
+              &lt;/a&gt;
+          &lt;/div&gt;
+      &lt;/article&gt;
+      &lt;article class="card"&gt;
+          &lt;figure class="card__header"&gt;
+              &lt;img src="img/card_bg01_03.jpg" alt="웹표준 사이트 만들기"&gt;
+          &lt;/figure&gt;
+          &lt;div class="card__body"&gt;
+              &lt;h3 class="tit"&gt;말티즈가 간식 달라고 할때&lt;/h3&gt;
+              &lt;p class="decs"&gt;말티즈는 간식을 원할 때 주인을 뚫어져라 처다보거나 간식이 있는 곳으로 가 짖습니다.한개만 주면 더 달라고 쪼릅니다. 안주면 주인 다리를
+                  발톱으로 박박
+                  긁습니다.&lt;/p&gt;
+              &lt;a class="btn" href="/"&gt;
+                  더 자세히 보기
+                  &lt;span aria-hidden="true"&gt;
+                      &lt;svg width="65" height="8" viewBox="0 0 65 8" fill="none"
+                          xmlns="http://www.w3.org/2000/svg"&gt;
+                          &lt;path
+                              d="M64.3536 4.35355C64.5488 4.15829 64.5488 3.84171 64.3536 3.64645L61.1716 0.464466C60.9763 0.269203 60.6597 0.269203 60.4645 0.464466C60.2692 0.659728 60.2692 0.97631 60.4645 1.17157L63.2929 4L60.4645 6.82843C60.2692 7.02369 60.2692 7.34027 60.4645 7.53553C60.6597 7.7308 60.9763 7.7308 61.1716 7.53553L64.3536 4.35355ZM0 4.5H64V3.5H0L0 4.5Z"
+                              fill="black" /&gt;
+                      &lt;/svg&gt;
+                  &lt;/span&gt;
+              &lt;/a&gt;
+          &lt;/div&gt;
+      &lt;/article&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+&lt;!--cardType--&gt;
 </code></pre>
                 </div>
                 <div class="tab-box">
                   <pre
                     class="line-numbers language-css"
-                  ><code class="language-css">
+                  ><code class="language-css">// 슬라이드효과
+var swiper = new Swiper(".mySwiper", {
+  navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+  },
+  autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+  },
+  pagination: {
+      el: ".swiper-pagination",
+      type: 'bullets',
+      clickable: true,
+  },
+});
 
+const btnStop = document.querySelector(".swiper-button-stop");  // 스와이퍼 버튼
+const btnStart = document.querySelector(".swiper-button-play");
+const btnHam = document.querySelector(".header__ham");          // 햄버거 버튼
+const btnMenu = document.querySelector(".header__menu");        // 메뉴
+const btnMenuList = btnMenu.querySelectorAll("ul li a");        // 메뉴리스트
+
+btnStart.style.display = "none";
+
+btnStop.addEventListener("click", () => {
+    swiper.autoplay.stop();
+    btnStart.style.display = "block";
+    btnStop.style.display = "none";
+});
+btnStart.addEventListener("click", () => {
+    swiper.autoplay.start();
+    btnStart.style.display = "none";
+    btnStop.style.display = "block";
+});
+
+btnMenuList.forEach((list) => {
+    list.addEventListener("click", () => {
+        document.body.classList.remove("fixed");
+        btnMenu.classList.remove("active");
+        btnHam.classList.remove("active");
+    });
+});
+
+btnHam.addEventListener("click", () => {
+    btnHam.classList.toggle("active");
+    btnMenu.classList.toggle("active");
+    document.body.classList.toggle("fixed");
+});
+
+window.addEventListener("resize", () => {
+    let width = window.innerWidth;
+    if (width > 1300) {
+        document.body.classList.remove("fixed");
+        btnMenu.classList.remove("active");
+        btnHam.classList.remove("active");
+    }
+});
+
+//스크롤 이동
+document.querySelectorAll("a").forEach(li => {
+    li.addEventListener("click", (e) => {
+        e.preventDefault();
+        document.querySelector(li.getAttribute("href")).scrollIntoView({
+            behavior: "smooth"
+        });
+    });
+});
 </code></pre>
                 </div>
                 <div class="tab-box">
                   <pre
                     class="line-numbers language-css"
-                  ><code class="language-css">
-  
+                  ><code class="language-css">/* 이미지 대체(ir) 효과 */
+  .ir {
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+  }
 </code></pre>
                 </div>
               </div>
