@@ -64,7 +64,7 @@ nav ul li a:hover::before {
 
 @media (max-width: 450px) {
   #header {
-    width: 91%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 10px 10px;
@@ -102,7 +102,7 @@ nav ul li a:hover::before {
     height: 50px;
     display: block;
     cursor: pointer;
-    /* padding-right: 40px; */
+    padding-right: 30px;
   }
   .header__ham span {
     display: block;
