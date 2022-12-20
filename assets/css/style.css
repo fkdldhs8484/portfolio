@@ -9,7 +9,7 @@
   font-family: "Abel";
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px 10px 20px;
+  padding: 10px 20px;
   background: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(10px);
 }
@@ -65,9 +65,8 @@ nav ul li a:hover::before {
 @media (max-width: 450px) {
   #header {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 10px;
+    /* display: flex;
+    justify-content: space-between; */
   }
 
   #header nav {
@@ -94,15 +93,15 @@ nav ul li a:hover::before {
   }
 
   .header__ham {
-    /* position: absolute;
-    right: 10px;
-    top: 7px; */
+    position: relative;
+    right: 40px;
+    top: 2px;
     z-index: 1000;
     width: 50px;
     height: 50px;
     display: block;
     cursor: pointer;
-    padding-right: 30px;
+    /* padding-right: 30px; */
   }
   .header__ham span {
     display: block;
